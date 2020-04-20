@@ -31,5 +31,5 @@ echo -1;
 }
 $a = "1";
 $b = "71";
-/*If you want to add more elder mod you must add more $. Example:(> if($id == $a Or $b Or $c Or $d) and $c and $d is the accountsID<)*/
+//If you want to add more elder mod you must add more $. Example:(> if($id == $a Or $b Or $c Or $d) and $c and $d is the accountsID<)
 ?>
