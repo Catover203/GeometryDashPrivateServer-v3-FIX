@@ -21,7 +21,7 @@ if($id != "" AND $gjp != ""){
 }else{
 	echo -1;
 }
-
+//elder mod user access
 if($id == $a Or $b){
 echo 2;
 }
