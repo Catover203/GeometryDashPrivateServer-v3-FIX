@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: localhost
--- Thời gian đã tạo: Th4 18, 2020 lúc 06:16 AM
+-- Thời gian đã tạo: Th4 21, 2020 lúc 04:26 AM
 -- Phiên bản máy phục vụ: 10.3.22-MariaDB-log
 -- Phiên bản PHP: 7.2.29
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `71852db3`
+-- Cơ sở dữ liệu: `GDPS`
 --
 
 -- --------------------------------------------------------
@@ -53,7 +53,7 @@ CREATE TABLE `accounts` (
   `accountID` int(11) NOT NULL,
   `saveData` longtext COLLATE utf8_unicode_ci NOT NULL,
   `isAdmin` int(11) NOT NULL DEFAULT 0,
-  `userID` int(11) NOT NULL DEFAULT 0,
+  `userID` int(11) NOT NULL,
   `friends` varchar(1024) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'unused',
   `blockedBy` varchar(1024) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'unused',
   `blocked` varchar(1024) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'unused',
@@ -68,7 +68,8 @@ CREATE TABLE `accounts` (
   `friendsCount` int(11) NOT NULL DEFAULT 0,
   `saveKey` blob NOT NULL,
   `discordID` bigint(20) NOT NULL DEFAULT 0,
-  `discordLinkReq` bigint(20) NOT NULL DEFAULT 0
+  `discordLinkReq` bigint(20) NOT NULL DEFAULT 0,
+  `isBanned` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -230,8 +231,8 @@ CREATE TABLE `levels` (
   `levelInfo` mediumtext COLLATE utf8_unicode_ci NOT NULL,
   `secret` mediumtext COLLATE utf8_unicode_ci NOT NULL,
   `starDifficulty` int(11) NOT NULL DEFAULT 0 COMMENT '0=N/A 10=EASY 20=NORMAL 30=HARD 40=HARDER 50=INSANE 50=AUTO 50=DEMON',
-  `downloads` int(11) NOT NULL DEFAULT 300,
-  `likes` int(11) NOT NULL DEFAULT 100,
+  `downloads` int(11) NOT NULL DEFAULT 0,
+  `likes` int(11) NOT NULL DEFAULT 0,
   `starDemon` int(1) NOT NULL DEFAULT 0,
   `starAuto` varchar(11) COLLATE utf8_unicode_ci NOT NULL DEFAULT '0',
   `starStars` int(11) NOT NULL DEFAULT 0,
@@ -397,9 +398,9 @@ CREATE TABLE `quests` (
 --
 
 INSERT INTO `quests` (`ID`, `type`, `amount`, `reward`, `name`) VALUES
-(1, 1, 200, 50, 'Quest 1'),
-(2, 2, 10, 200, 'Quest 1'),
-(3, 1, 200, 50, 'Quest 3');
+(1, 1, 500, 50, 'Q2'),
+(2, 2, 10, 50, 'Q1'),
+(3, 3, 20, 50, 'Q3');
 
 -- --------------------------------------------------------
 
@@ -483,7 +484,7 @@ INSERT INTO `roles` (`roleID`, `priority`, `roleName`, `commandRate`, `commandFe
 (1, 1, 'Admin Mod', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '000,242,255', 2),
 (2, 1, 'Admin helper mods', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '255,115,038', 2),
 (3, 0, 'Elder Mods', 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, '000,255,000', 2),
-(4, 1, 'mods', 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, '255,255,255', 1);
+(4, 0, 'mods', 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, '255,255,255', 1);
 
 -- --------------------------------------------------------
 
@@ -584,7 +585,8 @@ ALTER TABLE `acccomments`
 ALTER TABLE `accounts`
   ADD PRIMARY KEY (`accountID`),
   ADD UNIQUE KEY `userName` (`userName`),
-  ADD KEY `isAdmin` (`isAdmin`);
+  ADD KEY `isAdmin` (`isAdmin`),
+  ADD KEY `userID` (`userID`);
 
 --
 -- Chỉ mục cho bảng `actions`
