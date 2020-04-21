@@ -121,7 +121,7 @@ if(!empty($_POST["userhere"]) AND !empty($_POST["passhere"]) AND !empty($_POST["
 	echo "Level reuploaded - $result";
 }else{
 	echo '<form action="levelToGD.php" method="post">Your password for the target server is NOT saved, it\'s used for one-time verification purposes only.
-	<h3>CvoltonGDPS</h3>Username: <input type="text" name="userhere"><br>
+	<h3>ThisGDPS</h3>Username: <input type="text" name="userhere"><br>
 	Password: <input type="password" name="passhere"><br>
 	Level ID: <input type="text" name="levelID"><br>
 	<h3>Target server</h3>Username: <input type="text" name="usertarg"><br>
