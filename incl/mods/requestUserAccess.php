@@ -1,35 +1,42 @@
 <?php
+//Requesting files
 chdir(dirname(__FILE__));
-//error_reporting(0);
 include "../lib/connection.php";
 require_once "../lib/GJPCheck.php";
 require_once "../lib/exploitPatch.php";
-$ep = new exploitPatch();
 require_once "../lib/mainLib.php";
+$ep = new exploitPatch();
 $gs = new mainLib();
+$GJPCheck = new GJPCheck();
+//Getting data
 $gjp = $ep->remove($_POST["gjp"]);
-$id = $ep->remove($_POST["accountID"]);
-if($id != "" AND $gjp != ""){
-	$GJPCheck = new GJPCheck();
-	$gjpresult = $GJPCheck->check($gjp,$id);
-	if($gjpresult == 1){
-		$permState = $gs->getMaxValuePermission($id, "actionRequestMod");
-		echo $permState;
+$accountID = $ep->remove($_POST["accountID"]);
+if($ep->remove($_POST["secret"]) != "Wmfd2893gb7") exit("-1");
+//Checking nothing's empty
+if($accountID && $gjp){
+	//Checking GJP
+	if($GJPCheck->check($gjp, $accountID)){
+		//Checking moderator status
+		$permState = $gs->getMaxValuePermission($accountID, "actionRequestMod");
+		if(!$permState){
+			//Not moderator
+			exit("-1");
+		}elseif($accountID == $a Or $b Or $c){
+			echo 2;
+		}else{
+			echo $permState;
+		}
 	}else{
-		echo -1;
+		//Error
+		exit("-1");
 	}
 }else{
-	echo -1;
+	//Failure
+	exit("-1");
 }
-//elder mod user access
-if($id == $a Or $b){
-echo 2;
-}
-else
-{
-echo -1;
-}
-$a = "1";
-$b = "71";
-//If you want to add more elder mod you must add more $. Example:(> if($id == $a Or $b Or $c Or $d) and $c and $d is the accountsID<)
+$a=;
+$b=;
+$c=;
+//add Account ID to $a, $b, $c if you want to the elder mod
+//you can add $d, $e, $g,..... if you want to more elder mod
 ?>
