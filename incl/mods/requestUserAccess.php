@@ -21,7 +21,8 @@ if($accountID && $gjp){
 		if(!$permState){
 			//Not moderator
 			exit("-1");
-		}elseif($accountID == $a Or $b Or $c){
+		}elseif($accountID == 1 Or 2 Or 3){
+			//add AccountID here if you want to more elder mod
 			echo 2;
 		}else{
 			echo $permState;
@@ -34,9 +35,4 @@ if($accountID && $gjp){
 	//Failure
 	exit("-1");
 }
-$a=;
-$b=;
-$c=;
-//add Account ID to $a, $b, $c if you want to the elder mod
-//you can add $d, $e, $g,..... if you want to more elder mod
 ?>
