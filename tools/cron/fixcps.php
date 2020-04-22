@@ -4,7 +4,7 @@ echo "Please wait...<br>";
 ob_flush();
 flush();
 if(file_exists("logs/fixcpslog.txt")){
-	$cptime = file_get_contents("../logs/fixcpslog.txt");
+	$cptime = file_get_contents("logs/fixcpslog.txt");
 	$newtime = time() - 30;
 	if($cptime > $newtime){
 		$remaintime = time() - $cptime;
