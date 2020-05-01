@@ -3,7 +3,6 @@
 session_start();
 if(!isset($_SESSION["accountID"]) || !$_SESSION["accountID"]) exit(header("Location: ../login/login.php"));
 //Requesting files
-include "../../config/email.php";
 include "../../incl/lib/connection.php";
 require_once "../incl/dashboardLib.php";
 require_once "../../incl/lib/mainLib.php";
