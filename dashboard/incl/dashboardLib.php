@@ -93,7 +93,7 @@ class dashboardLib{
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 							<a class="dropdown-item" href="stats/accounts.php">'.$this->getLocalizedString("accounts").' </a>
-							<a class="dropdown-item" href="stats/account.php">'.$this->getLocalizedString("levels").' </a>
+							<a class="dropdown-item" href="stats/levels.php">'.$this->getLocalizedString("levels").' </a>
 							<a class="dropdown-item" href="stats/modActionsList.php">'.$this->getLocalizedString("modActions").'</a>
 							<a class="dropdown-item" href="stats/packTable.php">'.$this->getLocalizedString("packTable").'</a>
 							<a class="dropdown-item" href="stats/gauntletTable.php">'.$this->getLocalizedString("gauntletTable").'</a>';
@@ -115,8 +115,9 @@ class dashboardLib{
 							<i class="fa fa-wrench" aria-hidden="true"></i> '.$this->getLocalizedString("modTools").'
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							<a class="dropdown-item" href="tools/leaderboardsBan.php">'.$this->getLocalizedString("leaderboardBan").' (T)</a>
-							<a class="dropdown-item" href="tools/packCreate.php">'.$this->getLocalizedString("packManage").' (T)</a>
+							<a class="dropdown-item" href="tools/leaderboardsBan.php">'.$this->getLocalizedString("leaderboardBan").'</a>
+						        <a class="dropdown-item" href="tools/leaderboardsUnban.php">'.$this->getLocalizedString("leaderboardUnban").'</a>
+							<a class="dropdown-item" href="tools/packCreate.php">'.$this->getLocalizedString("packManage").'</a>
 						</div>
 					</li>';
 			}
