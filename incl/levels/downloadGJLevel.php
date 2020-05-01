@@ -53,7 +53,7 @@ if(!is_numeric($levelID)){
 		//adding the download
 		$query6 = $db->prepare("SELECT count(*) FROM actions WHERE type=:type AND value=:itemID AND value2=:ip");
 		$query6->execute([':type' => 7, ':itemID' => $levelID, ':ip' => $ip]);
-		if($query6->fetchColumn() < 2){
+		if($query6->fetchColumn() < 100000){
 			$query2=$db->prepare("UPDATE levels SET downloads = downloads + 1 WHERE levelID = :levelID");
 			$query2->execute([':levelID' => $levelID]);
 			$query6 = $db->prepare("INSERT INTO actions (type, value, timestamp, value2) VALUES 
