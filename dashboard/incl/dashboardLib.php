@@ -92,8 +92,8 @@ class dashboardLib{
 							<i class="fa fa-folder-open" aria-hidden="true"></i> '.$this->getLocalizedString("browse").'
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							<a class="dropdown-item" href="#">'.$this->getLocalizedString("accounts").' (N)</a>
-							<a class="dropdown-item" href="#">'.$this->getLocalizedString("levels").' (N)</a>
+							<a class="dropdown-item" href="stats/accounts.php">'.$this->getLocalizedString("accounts").' </a>
+							<a class="dropdown-item" href="stats/account.php">'.$this->getLocalizedString("levels").' </a>
 							<a class="dropdown-item" href="stats/modActionsList.php">'.$this->getLocalizedString("modActions").'</a>
 							<a class="dropdown-item" href="stats/packTable.php">'.$this->getLocalizedString("packTable").'</a>
 							<a class="dropdown-item" href="stats/gauntletTable.php">'.$this->getLocalizedString("gauntletTable").'</a>';
@@ -104,19 +104,19 @@ class dashboardLib{
 							<i class="fa fa-user" aria-hidden="true"></i> '.$this->getLocalizedString("accountManagement").'
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							<a class="dropdown-item" href="../tools/account/changePassword.php">'.$this->getLocalizedString("changePassword").' (T)</a>
-							<a class="dropdown-item" href="../tools/account/changeUsername.php">'.$this->getLocalizedString("changeUsername").' (T)</a>
+							<a class="dropdown-item" href="account/changePassword.php">'.$this->getLocalizedString("changePassword").' (T)</a>
+							<a class="dropdown-item" href="account/changeUsername.php">'.$this->getLocalizedString("changeUsername").' (T)</a>
 							<a class="dropdown-item" href="account/unlisted.php">'.$this->getLocalizedString("unlistedLevels").'</a>
 						</div>
-					</li>' . $browse . '<a class="dropdown-item" href="../tools/stats/songList.php">'.$this->getLocalizedString("songs").' (T)</a></div></li>';
+					</li>' . $browse . '<a class="dropdown-item" href="stats/song.php">'.$this->getLocalizedString("songs").' (T)</a></div></li>';
 			if($gs->checkPermission($_SESSION["accountID"], "dashboardModTools")){
 				echo '<li class="nav-item dropdown '.$modActive.'">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							<i class="fa fa-wrench" aria-hidden="true"></i> '.$this->getLocalizedString("modTools").'
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							<a class="dropdown-item" href="../tools/leaderboardsBan.php">'.$this->getLocalizedString("leaderboardBan").' (T)</a>
-							<a class="dropdown-item" href="../tools/packCreate.php">'.$this->getLocalizedString("packManage").' (T)</a>
+							<a class="dropdown-item" href="tools/leaderboardsBan.php">'.$this->getLocalizedString("leaderboardBan").' (T)</a>
+							<a class="dropdown-item" href="tools/packCreate.php">'.$this->getLocalizedString("packManage").' (T)</a>
 						</div>
 					</li>';
 			}
@@ -128,7 +128,7 @@ class dashboardLib{
 							<i class="fa fa-upload" aria-hidden="true"></i> '.$this->getLocalizedString("reuploadSection").'
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							<a class="dropdown-item" href="../tools/levelReupload.php">'.$this->getLocalizedString("levelReupload").' (T) (note: gonna be both gdps to gd and gd to gdps)</a>
+							<a class="dropdown-item" href="reupload/tools/levelReupload.php">'.$this->getLocalizedString("levelReupload").'</a>
 							<a class="dropdown-item" href="reupload/songAdd.php">'.$this->getLocalizedString("songAdd").'</a>
 						</div>
 					</li>
