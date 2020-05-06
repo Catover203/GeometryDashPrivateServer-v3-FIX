@@ -1,11 +1,12 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: localhost
--- Thời gian đã tạo: Th4 23, 2020 lúc 04:13 PM
--- Phiên bản máy phục vụ: 10.3.22-MariaDB-log
--- Phiên bản PHP: 7.2.29
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th5 06, 2020 lúc 05:52 AM
+-- Phiên bản máy phục vụ: 10.1.29-MariaDB
+-- Phiên bản PHP: 7.1.12
+-- Catover203CODE = DECODE{TYPE=COCD;Un-php-to=COCD_then=reset_;*SSL|SECURITE_SYSTEM_LAYER=ON|*=>securite_and_cant_hack}('JHhbgHHVFRfxGCFgcd325e5FVHYUgtfgvHYTYTTFV')[powering='not-show-to-all']
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +20,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `GDPS`
+-- Cơ sở dữ liệu: `gdps`
 --
 
 -- --------------------------------------------------------
@@ -35,8 +36,8 @@ CREATE TABLE `acccomments` (
   `secret` varchar(10) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'unused',
   `commentID` int(11) NOT NULL,
   `timestamp` int(11) NOT NULL,
-  `likes` int(11) NOT NULL DEFAULT 0,
-  `isSpam` int(11) NOT NULL DEFAULT 0
+  `likes` int(11) NOT NULL DEFAULT '0',
+  `isSpam` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -52,24 +53,26 @@ CREATE TABLE `accounts` (
   `secret` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'unused',
   `accountID` int(11) NOT NULL,
   `saveData` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `isAdmin` int(11) NOT NULL DEFAULT 0,
+  `isAdmin` int(11) NOT NULL DEFAULT '0',
   `userID` int(11) NOT NULL,
   `friends` varchar(1024) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'unused',
   `blockedBy` varchar(1024) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'unused',
   `blocked` varchar(1024) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'unused',
-  `mS` int(11) NOT NULL DEFAULT 0,
-  `frS` int(11) NOT NULL DEFAULT 0,
-  `cS` int(11) NOT NULL DEFAULT 0,
+  `mS` int(11) NOT NULL DEFAULT '0',
+  `frS` int(11) NOT NULL DEFAULT '0',
+  `cS` int(11) NOT NULL DEFAULT '0',
   `youtubeurl` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
   `twitter` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
   `twitch` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
   `salt` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
-  `registerDate` int(11) NOT NULL DEFAULT 0,
-  `friendsCount` int(11) NOT NULL DEFAULT 0,
+  `registerDate` int(11) NOT NULL DEFAULT '0',
+  `friendsCount` int(11) NOT NULL DEFAULT '0',
   `saveKey` blob NOT NULL,
-  `discordID` bigint(20) NOT NULL DEFAULT 0,
-  `discordLinkReq` bigint(20) NOT NULL DEFAULT 0,
-  `isBanned` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+  `discordID` bigint(20) NOT NULL DEFAULT '0',
+  `discordLinkReq` bigint(20) NOT NULL DEFAULT '0',
+  `isBanned` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `usernameCount` int(11) NOT NULL,
+  `usernameChangeDate` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -80,15 +83,15 @@ CREATE TABLE `accounts` (
 
 CREATE TABLE `actions` (
   `ID` int(11) NOT NULL,
-  `type` int(11) NOT NULL DEFAULT 0,
+  `type` int(11) NOT NULL DEFAULT '0',
   `value` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '0',
-  `timestamp` int(11) NOT NULL DEFAULT 0,
+  `timestamp` int(11) NOT NULL DEFAULT '0',
   `value2` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '0',
-  `value3` int(11) NOT NULL DEFAULT 0,
-  `value4` int(11) NOT NULL DEFAULT 0,
-  `value5` int(11) NOT NULL DEFAULT 0,
-  `value6` int(11) NOT NULL DEFAULT 0,
-  `account` int(11) NOT NULL DEFAULT 0
+  `value3` int(11) NOT NULL DEFAULT '0',
+  `value4` int(11) NOT NULL DEFAULT '0',
+  `value5` int(11) NOT NULL DEFAULT '0',
+  `value6` int(11) NOT NULL DEFAULT '0',
+  `account` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -128,9 +131,9 @@ CREATE TABLE `comments` (
   `levelID` int(11) NOT NULL,
   `commentID` int(11) NOT NULL,
   `timestamp` int(11) NOT NULL,
-  `likes` int(11) NOT NULL DEFAULT 0,
-  `percent` int(11) NOT NULL DEFAULT 0,
-  `isSpam` tinyint(1) NOT NULL DEFAULT 0
+  `likes` int(11) NOT NULL DEFAULT '0',
+  `percent` int(11) NOT NULL DEFAULT '0',
+  `isSpam` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -155,7 +158,7 @@ CREATE TABLE `dailyfeatures` (
   `feaID` int(11) NOT NULL,
   `levelID` int(11) NOT NULL,
   `timestamp` int(11) NOT NULL,
-  `type` int(11) NOT NULL DEFAULT 0
+  `type` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -170,7 +173,7 @@ CREATE TABLE `friendreqs` (
   `comment` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
   `uploadDate` int(11) NOT NULL,
   `ID` int(11) NOT NULL,
-  `isNew` tinyint(1) NOT NULL DEFAULT 1
+  `isNew` tinyint(1) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -210,48 +213,48 @@ CREATE TABLE `gauntlets` (
 
 CREATE TABLE `levels` (
   `gameVersion` int(11) NOT NULL,
-  `binaryVersion` int(11) NOT NULL DEFAULT 0,
+  `binaryVersion` int(11) NOT NULL DEFAULT '0',
   `userName` mediumtext COLLATE utf8_unicode_ci NOT NULL,
   `levelID` int(11) NOT NULL,
   `levelName` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `levelDesc` mediumtext COLLATE utf8_unicode_ci NOT NULL,
   `levelVersion` int(11) NOT NULL,
-  `levelLength` int(11) NOT NULL DEFAULT 0,
+  `levelLength` int(11) NOT NULL DEFAULT '0',
   `audioTrack` int(11) NOT NULL,
   `auto` int(11) NOT NULL,
   `password` int(11) NOT NULL,
   `original` int(11) NOT NULL,
-  `twoPlayer` int(11) NOT NULL DEFAULT 0,
-  `songID` int(11) NOT NULL DEFAULT 0,
-  `objects` int(11) NOT NULL DEFAULT 0,
-  `coins` int(11) NOT NULL DEFAULT 0,
-  `requestedStars` int(11) NOT NULL DEFAULT 0,
+  `twoPlayer` int(11) NOT NULL DEFAULT '0',
+  `songID` int(11) NOT NULL DEFAULT '0',
+  `objects` int(11) NOT NULL DEFAULT '0',
+  `coins` int(11) NOT NULL DEFAULT '0',
+  `requestedStars` int(11) NOT NULL DEFAULT '0',
   `extraString` mediumtext COLLATE utf8_unicode_ci NOT NULL,
-  `levelString` longtext COLLATE utf8_unicode_ci DEFAULT NULL,
+  `levelString` longtext COLLATE utf8_unicode_ci,
   `levelInfo` mediumtext COLLATE utf8_unicode_ci NOT NULL,
   `secret` mediumtext COLLATE utf8_unicode_ci NOT NULL,
-  `starDifficulty` int(11) NOT NULL DEFAULT 0 COMMENT '0=N/A 10=EASY 20=NORMAL 30=HARD 40=HARDER 50=INSANE 50=AUTO 50=DEMON',
-  `downloads` int(11) NOT NULL DEFAULT 0,
-  `likes` int(11) NOT NULL DEFAULT 0,
-  `starDemon` int(1) NOT NULL DEFAULT 0,
+  `starDifficulty` int(11) NOT NULL DEFAULT '0' COMMENT '0=N/A 10=EASY 20=NORMAL 30=HARD 40=HARDER 50=INSANE 50=AUTO 50=DEMON',
+  `downloads` int(11) NOT NULL DEFAULT '0',
+  `likes` int(11) NOT NULL DEFAULT '0',
+  `starDemon` int(1) NOT NULL DEFAULT '0',
   `starAuto` varchar(11) COLLATE utf8_unicode_ci NOT NULL DEFAULT '0',
-  `starStars` int(11) NOT NULL DEFAULT 0,
+  `starStars` int(11) NOT NULL DEFAULT '0',
   `uploadDate` varchar(1337) COLLATE utf8_unicode_ci NOT NULL,
   `updateDate` bigint(11) NOT NULL,
-  `rateDate` bigint(20) NOT NULL DEFAULT 0,
-  `starCoins` int(11) NOT NULL DEFAULT 0,
-  `starFeatured` int(11) NOT NULL DEFAULT 0,
-  `starHall` int(11) NOT NULL DEFAULT 0,
-  `starEpic` int(11) NOT NULL DEFAULT 0,
-  `starDemonDiff` int(11) NOT NULL DEFAULT 0,
+  `rateDate` bigint(20) NOT NULL DEFAULT '0',
+  `starCoins` int(11) NOT NULL DEFAULT '0',
+  `starFeatured` int(11) NOT NULL DEFAULT '0',
+  `starHall` int(11) NOT NULL DEFAULT '0',
+  `starEpic` int(11) NOT NULL DEFAULT '0',
+  `starDemonDiff` int(11) NOT NULL DEFAULT '0',
   `userID` int(11) NOT NULL,
   `extID` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `unlisted` int(11) NOT NULL,
-  `originalReup` int(11) NOT NULL DEFAULT 0 COMMENT 'used for levelReupload.php',
+  `originalReup` int(11) NOT NULL DEFAULT '0' COMMENT 'used for levelReupload.php',
   `hostname` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `isCPShared` int(11) NOT NULL DEFAULT 0,
-  `isDeleted` int(11) NOT NULL DEFAULT 0,
-  `isLDM` int(11) NOT NULL DEFAULT 0
+  `isCPShared` int(11) NOT NULL DEFAULT '0',
+  `isDeleted` int(11) NOT NULL DEFAULT '0',
+  `isLDM` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -266,8 +269,8 @@ CREATE TABLE `levelscores` (
   `levelID` int(11) NOT NULL,
   `percent` int(11) NOT NULL,
   `uploadDate` int(11) NOT NULL,
-  `attempts` int(11) NOT NULL DEFAULT 0,
-  `coins` int(11) NOT NULL DEFAULT 0
+  `attempts` int(11) NOT NULL DEFAULT '0',
+  `coins` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -319,7 +322,7 @@ CREATE TABLE `messages` (
   `toAccountID` int(11) NOT NULL,
   `timestamp` int(11) NOT NULL,
   `secret` varchar(25) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'unused',
-  `isNew` int(11) NOT NULL DEFAULT 0
+  `isNew` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -330,15 +333,15 @@ CREATE TABLE `messages` (
 
 CREATE TABLE `modactions` (
   `ID` int(11) NOT NULL,
-  `type` int(11) NOT NULL DEFAULT 0,
+  `type` int(11) NOT NULL DEFAULT '0',
   `value` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '0',
-  `timestamp` int(11) NOT NULL DEFAULT 0,
+  `timestamp` int(11) NOT NULL DEFAULT '0',
   `value2` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '0',
-  `value3` int(11) NOT NULL DEFAULT 0,
+  `value3` int(11) NOT NULL DEFAULT '0',
   `value4` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '0',
-  `value5` int(11) NOT NULL DEFAULT 0,
-  `value6` int(11) NOT NULL DEFAULT 0,
-  `account` int(11) NOT NULL DEFAULT 0,
+  `value5` int(11) NOT NULL DEFAULT '0',
+  `value6` int(11) NOT NULL DEFAULT '0',
+  `account` int(11) NOT NULL DEFAULT '0',
   `value7` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -350,7 +353,7 @@ CREATE TABLE `modactions` (
 
 CREATE TABLE `modipperms` (
   `categoryID` int(11) NOT NULL,
-  `actionFreeCopy` int(11) NOT NULL DEFAULT 0
+  `actionFreeCopy` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -437,46 +440,46 @@ CREATE TABLE `roleassign` (
 
 CREATE TABLE `roles` (
   `roleID` bigint(11) NOT NULL,
-  `priority` int(11) NOT NULL DEFAULT 0,
+  `priority` int(11) NOT NULL DEFAULT '0',
   `roleName` varchar(255) NOT NULL,
-  `commandRate` int(11) NOT NULL DEFAULT 0,
-  `commandFeature` int(11) NOT NULL DEFAULT 0,
-  `commandEpic` int(11) NOT NULL DEFAULT 0,
-  `commandUnepic` int(11) NOT NULL DEFAULT 0,
-  `commandVerifycoins` int(11) NOT NULL DEFAULT 0,
-  `commandDaily` int(11) NOT NULL DEFAULT 0,
-  `commandWeekly` int(11) NOT NULL DEFAULT 0,
-  `commandDelete` int(11) NOT NULL DEFAULT 0,
-  `commandSetacc` int(11) NOT NULL DEFAULT 0,
-  `commandRenameOwn` int(11) NOT NULL DEFAULT 1,
-  `commandRenameAll` int(11) NOT NULL DEFAULT 0,
-  `commandPassOwn` int(11) NOT NULL DEFAULT 1,
-  `commandPassAll` int(11) NOT NULL DEFAULT 0,
-  `commandDescriptionOwn` int(11) NOT NULL DEFAULT 1,
-  `commandDescriptionAll` int(11) NOT NULL DEFAULT 0,
-  `commandPublicOwn` int(11) NOT NULL DEFAULT 1,
-  `commandPublicAll` int(11) NOT NULL DEFAULT 0,
-  `commandUnlistOwn` int(11) NOT NULL DEFAULT 1,
-  `commandUnlistAll` int(11) NOT NULL DEFAULT 0,
-  `commandSharecpOwn` int(11) NOT NULL DEFAULT 1,
-  `commandSharecpAll` int(11) NOT NULL DEFAULT 0,
-  `commandSongOwn` int(11) NOT NULL DEFAULT 1,
-  `commandSongAll` int(11) NOT NULL DEFAULT 0,
-  `profilecommandDiscord` int(11) NOT NULL DEFAULT 1,
-  `actionRateDemon` int(11) NOT NULL DEFAULT 0,
-  `actionRateStars` int(11) NOT NULL DEFAULT 0,
-  `actionRateDifficulty` int(11) NOT NULL DEFAULT 0,
-  `actionRequestMod` int(11) NOT NULL DEFAULT 0,
-  `actionSuggestRating` int(11) NOT NULL DEFAULT 0,
-  `toolLeaderboardsban` int(11) NOT NULL DEFAULT 0,
-  `toolPackcreate` int(11) NOT NULL DEFAULT 0,
-  `toolModactions` int(11) NOT NULL DEFAULT 0,
-  `toolSuggestlist` int(11) NOT NULL DEFAULT 0,
-  `dashboardModTools` int(11) NOT NULL DEFAULT 0,
-  `modipCategory` int(11) NOT NULL DEFAULT 0,
-  `isDefault` int(11) NOT NULL DEFAULT 0,
+  `commandRate` int(11) NOT NULL DEFAULT '0',
+  `commandFeature` int(11) NOT NULL DEFAULT '0',
+  `commandEpic` int(11) NOT NULL DEFAULT '0',
+  `commandUnepic` int(11) NOT NULL DEFAULT '0',
+  `commandVerifycoins` int(11) NOT NULL DEFAULT '0',
+  `commandDaily` int(11) NOT NULL DEFAULT '0',
+  `commandWeekly` int(11) NOT NULL DEFAULT '0',
+  `commandDelete` int(11) NOT NULL DEFAULT '0',
+  `commandSetacc` int(11) NOT NULL DEFAULT '0',
+  `commandRenameOwn` int(11) NOT NULL DEFAULT '1',
+  `commandRenameAll` int(11) NOT NULL DEFAULT '0',
+  `commandPassOwn` int(11) NOT NULL DEFAULT '1',
+  `commandPassAll` int(11) NOT NULL DEFAULT '0',
+  `commandDescriptionOwn` int(11) NOT NULL DEFAULT '1',
+  `commandDescriptionAll` int(11) NOT NULL DEFAULT '0',
+  `commandPublicOwn` int(11) NOT NULL DEFAULT '1',
+  `commandPublicAll` int(11) NOT NULL DEFAULT '0',
+  `commandUnlistOwn` int(11) NOT NULL DEFAULT '1',
+  `commandUnlistAll` int(11) NOT NULL DEFAULT '0',
+  `commandSharecpOwn` int(11) NOT NULL DEFAULT '1',
+  `commandSharecpAll` int(11) NOT NULL DEFAULT '0',
+  `commandSongOwn` int(11) NOT NULL DEFAULT '1',
+  `commandSongAll` int(11) NOT NULL DEFAULT '0',
+  `profilecommandDiscord` int(11) NOT NULL DEFAULT '1',
+  `actionRateDemon` int(11) NOT NULL DEFAULT '0',
+  `actionRateStars` int(11) NOT NULL DEFAULT '0',
+  `actionRateDifficulty` int(11) NOT NULL DEFAULT '0',
+  `actionRequestMod` int(11) NOT NULL DEFAULT '0',
+  `actionSuggestRating` int(11) NOT NULL DEFAULT '0',
+  `toolLeaderboardsban` int(11) NOT NULL DEFAULT '0',
+  `toolPackcreate` int(11) NOT NULL DEFAULT '0',
+  `toolModactions` int(11) NOT NULL DEFAULT '0',
+  `toolSuggestlist` int(11) NOT NULL DEFAULT '0',
+  `dashboardModTools` int(11) NOT NULL DEFAULT '0',
+  `modipCategory` int(11) NOT NULL DEFAULT '0',
+  `isDefault` int(11) NOT NULL DEFAULT '0',
   `commentColor` varchar(11) NOT NULL DEFAULT '000,000,000',
-  `modBadgeLevel` int(11) NOT NULL DEFAULT 0
+  `modBadgeLevel` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -505,9 +508,9 @@ CREATE TABLE `songs` (
   `size` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `download` varchar(1337) COLLATE utf8_unicode_ci NOT NULL,
   `hash` varchar(256) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
-  `isDisabled` int(11) NOT NULL DEFAULT 0,
-  `levelsCount` int(11) NOT NULL DEFAULT 0,
-  `reuploadTime` int(11) NOT NULL DEFAULT 0
+  `isDisabled` int(11) NOT NULL DEFAULT '0',
+  `levelsCount` int(11) NOT NULL DEFAULT '0',
+  `reuploadTime` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -518,13 +521,13 @@ CREATE TABLE `songs` (
 
 CREATE TABLE `suggest` (
   `ID` int(11) NOT NULL,
-  `suggestBy` int(11) NOT NULL DEFAULT 0,
-  `suggestLevelId` int(11) NOT NULL DEFAULT 0,
-  `suggestDifficulty` int(11) NOT NULL DEFAULT 0 COMMENT '0 - NA 10 - Easy 20 - Normal 30 - Hard 40 - Harder 50 - Insane/Demon/Auto',
-  `suggestStars` int(11) NOT NULL DEFAULT 0,
-  `suggestFeatured` int(11) NOT NULL DEFAULT 0,
-  `suggestAuto` int(11) NOT NULL DEFAULT 0,
-  `suggestDemon` int(11) NOT NULL DEFAULT 0,
+  `suggestBy` int(11) NOT NULL DEFAULT '0',
+  `suggestLevelId` int(11) NOT NULL DEFAULT '0',
+  `suggestDifficulty` int(11) NOT NULL DEFAULT '0' COMMENT '0 - NA 10 - Easy 20 - Normal 30 - Hard 40 - Harder 50 - Insane/Demon/Auto',
+  `suggestStars` int(11) NOT NULL DEFAULT '0',
+  `suggestFeatured` int(11) NOT NULL DEFAULT '0',
+  `suggestAuto` int(11) NOT NULL DEFAULT '0',
+  `suggestDemon` int(11) NOT NULL DEFAULT '0',
   `timestamp` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -539,38 +542,38 @@ CREATE TABLE `users` (
   `userID` int(11) NOT NULL,
   `extID` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `userName` varchar(69) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'undefined',
-  `stars` int(11) NOT NULL DEFAULT 0,
-  `demons` int(11) NOT NULL DEFAULT 0,
-  `icon` int(11) NOT NULL DEFAULT 0,
-  `color1` int(11) NOT NULL DEFAULT 0,
-  `color2` int(11) NOT NULL DEFAULT 3,
-  `iconType` int(11) NOT NULL DEFAULT 0,
-  `coins` int(11) NOT NULL DEFAULT 0,
-  `userCoins` int(11) NOT NULL DEFAULT 0,
-  `special` int(11) NOT NULL DEFAULT 0,
-  `gameVersion` int(11) NOT NULL DEFAULT 0,
+  `stars` int(11) NOT NULL DEFAULT '0',
+  `demons` int(11) NOT NULL DEFAULT '0',
+  `icon` int(11) NOT NULL DEFAULT '0',
+  `color1` int(11) NOT NULL DEFAULT '0',
+  `color2` int(11) NOT NULL DEFAULT '3',
+  `iconType` int(11) NOT NULL DEFAULT '0',
+  `coins` int(11) NOT NULL DEFAULT '0',
+  `userCoins` int(11) NOT NULL DEFAULT '0',
+  `special` int(11) NOT NULL DEFAULT '0',
+  `gameVersion` int(11) NOT NULL DEFAULT '0',
   `secret` varchar(69) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'none',
-  `accIcon` int(11) NOT NULL DEFAULT 0,
-  `accShip` int(11) NOT NULL DEFAULT 0,
-  `accBall` int(11) NOT NULL DEFAULT 0,
-  `accBird` int(11) NOT NULL DEFAULT 0,
-  `accDart` int(11) NOT NULL DEFAULT 0,
-  `accRobot` int(11) DEFAULT 0,
-  `accGlow` int(11) NOT NULL DEFAULT 0,
-  `creatorPoints` double NOT NULL DEFAULT 0,
+  `accIcon` int(11) NOT NULL DEFAULT '0',
+  `accShip` int(11) NOT NULL DEFAULT '0',
+  `accBall` int(11) NOT NULL DEFAULT '0',
+  `accBird` int(11) NOT NULL DEFAULT '0',
+  `accDart` int(11) NOT NULL DEFAULT '0',
+  `accRobot` int(11) DEFAULT '0',
+  `accGlow` int(11) NOT NULL DEFAULT '0',
+  `creatorPoints` double NOT NULL DEFAULT '0',
   `IP` varchar(69) COLLATE utf8_unicode_ci NOT NULL DEFAULT '127.0.0.1',
-  `lastPlayed` int(11) NOT NULL DEFAULT 0,
-  `diamonds` int(11) NOT NULL DEFAULT 0,
-  `orbs` int(11) NOT NULL DEFAULT 0,
-  `completedLvls` int(11) NOT NULL DEFAULT 0,
-  `accSpider` int(11) NOT NULL DEFAULT 0,
-  `accExplosion` int(11) NOT NULL DEFAULT 0,
-  `chest1time` int(11) NOT NULL DEFAULT 0,
-  `chest2time` int(11) NOT NULL DEFAULT 0,
-  `chest1count` int(11) NOT NULL DEFAULT 0,
-  `chest2count` int(11) NOT NULL DEFAULT 0,
-  `isBanned` int(11) NOT NULL DEFAULT 0,
-  `isCreatorBanned` int(11) NOT NULL DEFAULT 0
+  `lastPlayed` int(11) NOT NULL DEFAULT '0',
+  `diamonds` int(11) NOT NULL DEFAULT '0',
+  `orbs` int(11) NOT NULL DEFAULT '0',
+  `completedLvls` int(11) NOT NULL DEFAULT '0',
+  `accSpider` int(11) NOT NULL DEFAULT '0',
+  `accExplosion` int(11) NOT NULL DEFAULT '0',
+  `chest1time` int(11) NOT NULL DEFAULT '0',
+  `chest2time` int(11) NOT NULL DEFAULT '0',
+  `chest1count` int(11) NOT NULL DEFAULT '0',
+  `chest2count` int(11) NOT NULL DEFAULT '0',
+  `isBanned` int(11) NOT NULL DEFAULT '0',
+  `isCreatorBanned` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
