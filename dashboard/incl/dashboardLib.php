@@ -108,16 +108,16 @@ class dashboardLib{
 							<a class="dropdown-item" href="account/changeUsername.php">'.$this->getLocalizedString("changeUsername").'</a>
 							<a class="dropdown-item" href="account/unlisted.php">'.$this->getLocalizedString("unlistedLevels").'</a>
 						</div>
-					</li>' . $browse . '<a class="dropdown-item" href="stats/song.php">'.$this->getLocalizedString("songs").' (T)</a></div></li>';
+					</li>' . $browse . '<a class="dropdown-item" href="stats/song.php">'.$this->getLocalizedString("songs").'</a></div></li>';
 			if($gs->checkPermission($_SESSION["accountID"], "dashboardModTools")){
 				echo '<li class="nav-item dropdown '.$modActive.'">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							<i class="fa fa-wrench" aria-hidden="true"></i> '.$this->getLocalizedString("modTools").'
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							<a class="dropdown-item" href="tools/leaderboardsBan.php">'.$this->getLocalizedString("leaderboardBan").'</a>
-						        <a class="dropdown-item" href="tools/leaderboardsUnban.php">'.$this->getLocalizedString("leaderboardUnban").'</a>
-							<a class="dropdown-item" href="tools/packCreate.php">'.$this->getLocalizedString("packManage").'</a>
+							<a class="dropdown-item" href="tools/leaderboardsBan.php">leaderboard Ban</a>
+						        <a class="dropdown-item" href="tools/leaderboardsUnban.php">leaderboard Unban</a>
+							<a class="dropdown-item" href="tools/packCreate.php">Create Pack</a>
 						</div>
 					</li>';
 			}
