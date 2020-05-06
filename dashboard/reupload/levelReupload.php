@@ -7,7 +7,6 @@ if(!isset($_SESSION["accountID"]) OR $_SESSION["accountID"] == 0){
 }
 //Requesting files
 include "../../incl/lib/connection.php";
-include "../../config/defaults.php";
 require_once "../incl/dashboardLib.php";
 require_once "../../incl/lib/XORCipher.php";
 $dl = new dashboardLib();
