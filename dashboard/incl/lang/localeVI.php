@@ -71,10 +71,10 @@ $string["previous"] = "Trước";
 $string["next"] = "Kế tiếp";
 $string["last"] = "Cuối cùng";
 //modActionsList
-$string["action"] = "Action";
-$string["value"] = "1st Value";
-$string["value2"] = "2nd Value";
-$string["modAction1"] = "Rated a level";
+$string["action"] = "hành động";
+$string["value"] = "giá trị thứ 1";
+$string["value2"] = "giá trị thứ 2";
+$string["modAction1"] = "Đánh giá level";
 $string["modAction2"] = "Un/featured a level";
 $string["modAction3"] = "Un/verified coins";
 $string["modAction4"] = "Un/epiced level";
