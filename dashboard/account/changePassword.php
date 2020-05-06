@@ -3,6 +3,8 @@
 session_start();
 if(!isset($_SESSION["accountID"]) || !$_SESSION["accountID"]) exit(header("Location: ../login/login.php"));
 //Requesting files
+//vaul to fix
+$qna= 0;
 include "../../incl/lib/connection.php";
 require_once "../incl/dashboardLib.php";
 require_once "../../incl/lib/mainLib.php";
@@ -52,7 +54,7 @@ if(isset($_POST["username"]) && isset($_POST["newPassword"]) && isset($_POST["ol
 	//Checking pass
 	if ($generatePass->isValidUsrname($username, $oldPassword)) {
 		//Sending email
-		if($emailEnabled){
+		if($qna){
 			$URI = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 			$body = dirname($URI)."/dashboard/account/changePassword.php?u=$baseUsername&e=$baseEmail&n=$baseNewPassword&o=$basePassword.";
 			$mail = $gs->sendMail($emailMail, $email, "Change password", $body);
@@ -66,7 +68,7 @@ if(isset($_POST["username"]) && isset($_POST["newPassword"]) && isset($_POST["ol
 				$dl->printBox("<h1>".$dl->getLocalizedString("changePassword")."</h1>
 					<p>".$dl->getLocalizedString("emailSended")."</p>","account");
 			}
-		}elseif(!$emailEnabled){
+		}elseif(!$qna){
 			//Creating pass hash
 			$passhash = password_hash($newPassword, PASSWORD_DEFAULT);
 			//Updating password
@@ -87,11 +89,11 @@ if(isset($_POST["username"]) && isset($_POST["newPassword"]) && isset($_POST["ol
 	$dl->printBox('<h1>'.$dl->getLocalizedString("changePassword").'</h1>
 				<form action="" method="post">
 					<div class="form-group">
-						<input type="text" class="form-control" id="changePasswordUsername" name="username" placeholder="'.$dl->getLocalizedString("changePasswordUserNameFieldPlaceholder").'"><br>
-						<input type="password" class="form-control" id="changePasswordPassword" name="oldPassword" placeholder="'.$dl->getLocalizedString("changePasswordOldPasswordFieldPlaceholder").'"><br>
-						<input type="password" class="form-control" id="changeUsernameNewPassword" name="newPassword" placeholder="'.$dl->getLocalizedString("changePasswordNewPasswordFieldPlaceholder").'">
+						<input type="text" class="form-control" id="changePasswordUsername" name="username" placeholder="UserName"><br>
+						<input type="password" class="form-control" id="changePasswordPassword" name="oldPassword" placeholder="Old password"><br>
+						<input type="password" class="form-control" id="changeUsernameNewPassword" name="newPassword" placeholder="New password">
 					</div>
-					<button type="submit" class="btn btn-primary btn-block">'.$dl->getLocalizedString("changeBTN").'</button>
+					<button type="submit" class="btn btn-primary btn-block">Change Password</button>
 				</form>',"account");
 }
 ?>
