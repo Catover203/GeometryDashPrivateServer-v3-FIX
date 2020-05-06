@@ -115,13 +115,13 @@ if(!empty($_POST["levels"]) && !empty($_POST["stars"]) && !empty($_POST["name"])
 	$dl->printBox('<h1>'.$dl->getLocalizedString("packAdd").'</h1>
 				<form action="" method="post">
 					<div class="form-group">
-						<input type="text" class="form-control" id="mapPackName" name="name" placeholder="'.$dl->getLocalizedString("mapPackNameFieldPlaceholder").'"><br>
-						<input type="text" class="form-control" id="mapPackLevels" name="levels" placeholder="'.$dl->getLocalizedString("mapPackLevelsFieldPlaceholder").'"><br>
-						<input type="text" class="form-control" id="mapPackStars" name="stars" placeholder="'.$dl->getLocalizedString("mapPackStarsFieldPlaceholder").'"><br>
-						<input type="text" class="form-control" id="mapPackCoins" name="coins" placeholder="'.$dl->getLocalizedString("mapPackCoinsFieldPlaceholder").'"><br>
-						<input type="text" class="form-control" id="mapPackColor" name="color" placeholder="'.$dl->getLocalizedString("mapPackColorFieldPlaceholder").'">
+						<input type="text" class="form-control" id="mapPackName" name="name" placeholder="Map Pack Name"><br>
+						<input type="text" class="form-control" id="mapPackLevels" name="levels" placeholder="LevelsID (example 1,2,3,...)"><br>
+						<input type="text" class="form-control" id="mapPackStars" name="stars" placeholder="Star"><br>
+						<input type="text" class="form-control" id="mapPackCoins" name="coins" placeholder="Coin"><br>
+						<input type="text" class="form-control" id="mapPackColor" name="color" placeholder="Color(MTML Color, but remove #)">
 					</div>
-					<button type="submit" class="btn btn-primary btn-block">'.$dl->getLocalizedString("createBTN").'</button>
+					<button type="submit" class="btn btn-primary btn-block">Create A Map Pack</button>
 				</form>',"mod");
 }
 ?>
