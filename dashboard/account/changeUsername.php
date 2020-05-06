@@ -8,6 +8,7 @@ require_once "../incl/dashboardLib.php";
 require_once "../../incl/lib/mainLib.php";
 require_once "../../incl/lib/exploitPatch.php";
 require_once "../../incl/lib/generatePass.php";
+$qna = 0;
 $gs = new mainLib();
 $ep = new exploitPatch();
 $dl = new dashboardLib();
@@ -85,7 +86,7 @@ if(isset($_POST["username"]) && isset($_POST["newUsername"]) && isset($_POST["pa
 		$query = $db->prepare("SELECT usernameCount FROM accounts WHERE username = :username AND email = :email LIMIT 1");
 		$query->execute([':username' => $username, ':email' => $email]);
 		if($query->fetchColumn() > 2){
-			$errorDesc = $dl->getLocalizedString("changeUsernameError-4");
+			$errorDesc = $dl->getLocalizedString("You can't change password more than 2 time");
 			exit($dl->printBox('<h1>'.$dl->getLocalizedString("changeUsername")."</h1>
 							<p>$errorDesc</p>
 							<a class='btn btn-primary btn-block' href='".$_SERVER["REQUEST_URI"]."'>".$dl->getLocalizedString("tryAgainBTN")."</a>","account"));
@@ -113,7 +114,7 @@ if(isset($_POST["username"]) && isset($_POST["newUsername"]) && isset($_POST["pa
 							<p>$errorDesc</p>
 							<a class='btn btn-primary btn-block' href='".$_SERVER["REQUEST_URI"]."'>".$dl->getLocalizedString("tryAgainBTN")."</a>","account"));
 		}
-		if($emailEnabled){
+		if($qna){
 			//Sending email
 			$URI = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 			$body = dirname($URI)."/dashboard/account/changeUsername.php?u=$baseUsername&e=$baseEmail&n=$baseNewUsername&p=$basePassword.";
@@ -128,7 +129,7 @@ if(isset($_POST["username"]) && isset($_POST["newUsername"]) && isset($_POST["pa
 				$dl->printBox("<h1>".$dl->getLocalizedString("changeUsername")."</h1>
 					<p>".$dl->getLocalizedString("emailSended")."</p>","account");
 			}
-		}elseif(!$emailEnabled){
+		}elseif(!$qna){
 			//Updating username
 			$query = $db->prepare("UPDATE accComments SET username = :newUsername WHERE username = :username");
 			$query->execute([':newUsername' => $newUsername, ':username' => $username]);
@@ -144,7 +145,7 @@ if(isset($_POST["username"]) && isset($_POST["newUsername"]) && isset($_POST["pa
 			$query->execute([':newUsername' => $newUsername, ':username' => $username, ':email' => $email]);
 			if(!$query->rowCount()){
 				//Printing error
-				$errorDesc = $dl->getLocalizedString("changeUsernameError-1");
+				$errorDesc = $dl->getLocalizedString("change Username Error -1");
 				exit($dl->printBox('<h1>'.$dl->getLocalizedString("changeUsername")."</h1>
 								<p>$errorDesc</p>
 								<a class='btn btn-primary btn-block' href='".$_SERVER["REQUEST_URI"]."'>".$dl->getLocalizedString("tryAgainBTN")."</a>","account"));
@@ -169,11 +170,11 @@ if(isset($_POST["username"]) && isset($_POST["newUsername"]) && isset($_POST["pa
 	$dl->printBox('<h1>'.$dl->getLocalizedString("changeUsername").'</h1>
 				<form action="" method="post">
 					<div class="form-group">
-						<input type="text" class="form-control" id="changeUsernameUserName" name="username" placeholder="'.$dl->getLocalizedString("changeUsernameUserNameFieldPlaceholder").'"><br>
-						<input type="text" class="form-control" id="changeUsernameNewUserName" name="newUsername" placeholder="'.$dl->getLocalizedString("changeUsernameNewUserFieldPlaceholder").'"><br>
-						<input type="password" class="form-control" id="changeUsernamePassword" name="password" placeholder="'.$dl->getLocalizedString("changeUsernamePasswordFieldPlaceholder").'">
+						<input type="text" class="form-control" id="changeUsernameUserName" name="username" placeholder="UserName"><br>
+						<input type="text" class="form-control" id="changeUsernameNewUserName" name="newUsername" placeholder="New UserName"><br>
+						<input type="password" class="form-control" id="changeUsernamePassword" name="password" placeholder="Password">
 					</div>
-					<button type="submit" class="btn btn-primary btn-block">'.$dl->getLocalizedString("changeBTN").'</button>
+					<button type="submit" class="btn btn-primary btn-block">Change Username</button>
 				</form>',"account");
 }
 ?>
