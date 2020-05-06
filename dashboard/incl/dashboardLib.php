@@ -154,6 +154,7 @@ class dashboardLib{
 							<a class="dropdown-item" href="lang/switchLang.php?lang=DE">Deutsch</a>
 							<a class="dropdown-item" href="lang/switchLang.php?lang=EE">Eesti</a>
 							<a class="dropdown-item" href="lang/switchLang.php?lang=EN">English</a>
+							<a class="dropdown-item" href="lang/switchLang.php?lang=VI">Vietnamese (Tiếng Việt)</a>
 							<a class="dropdown-item" href="lang/switchLang.php?lang=EO">Esperanto</a>
 							<a class="dropdown-item" href="lang/switchLang.php?lang=ES">Español</a>
 							<a class="dropdown-item" href="lang/switchLang.php?lang=GR">Ελληνικά</a>
