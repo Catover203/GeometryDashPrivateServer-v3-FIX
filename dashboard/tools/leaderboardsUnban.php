@@ -57,9 +57,9 @@ if(!empty($_POST["userID"]) && !$_POST["userID"]){
 	$dl->printBox('<h1>'.$dl->getLocalizedString("leaderboardUnban").'</h1>
 				<form action="" method="post">
 					<div class="form-group">
-						<input type="text" class="form-control" id="banUserID" name="userID" placeholder="'.$dl->getLocalizedString("banUserIDFieldPlaceholder").'">
+						<input type="text" class="form-control" id="banUserID" name="userID" placeholder="UseID">
 					</div>
-					<button type="submit" class="btn btn-primary btn-block">'.$dl->getLocalizedString("unbanBTN").'</button>
+					<button type="submit" class="btn btn-primary btn-block">UnBAN</button>
 				</form>',"mod");
 }
 ?>
