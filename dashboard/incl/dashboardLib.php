@@ -104,8 +104,8 @@ class dashboardLib{
 							<i class="fa fa-user" aria-hidden="true"></i> '.$this->getLocalizedString("accountManagement").'
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							<a class="dropdown-item" href="account/changePassword.php">'.$this->getLocalizedString("changePassword").' (T)</a>
-							<a class="dropdown-item" href="account/changeUsername.php">'.$this->getLocalizedString("changeUsername").' (T)</a>
+							<a class="dropdown-item" href="account/changePassword.php">'.$this->getLocalizedString("changePassword").'</a>
+							<a class="dropdown-item" href="account/changeUsername.php">'.$this->getLocalizedString("changeUsername").'</a>
 							<a class="dropdown-item" href="account/unlisted.php">'.$this->getLocalizedString("unlistedLevels").'</a>
 						</div>
 					</li>' . $browse . '<a class="dropdown-item" href="stats/song.php">'.$this->getLocalizedString("songs").' (T)</a></div></li>';
@@ -129,7 +129,7 @@ class dashboardLib{
 							<i class="fa fa-upload" aria-hidden="true"></i> '.$this->getLocalizedString("reuploadSection").'
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							<a class="dropdown-item" href="reupload/tools/levelReupload.php">'.$this->getLocalizedString("levelReupload").'</a>
+							<a class="dropdown-item" href="reupload/levelReupload.php">'.$this->getLocalizedString("levelReupload").'</a>
 							<a class="dropdown-item" href="reupload/songAdd.php">'.$this->getLocalizedString("songAdd").'</a>
 						</div>
 					</li>
