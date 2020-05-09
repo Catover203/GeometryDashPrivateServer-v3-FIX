@@ -1,34 +1,32 @@
 <?php
-//Requesting files
 chdir(dirname(__FILE__));
+//error_reporting(0);
 include "../lib/connection.php";
-require_once "../lib/mainLib.php";
 require_once "../lib/GJPCheck.php";
-require_once "../misc/commands.php";
 require_once "../lib/exploitPatch.php";
-$gs = new mainLib();
+require_once "../lib/mainLib.php";
+require_once "../misc/commands.php";
 $cmds = new Commands();
+$mainLib = new mainLib();
 $ep = new exploitPatch();
 $GJPCheck = new GJPCheck();
-//Getting data
 $gjp = $ep->remove($_POST["gjp"]);
+$userName = $ep->remove($_POST["userName"]);
 $comment = $ep->remove($_POST["comment"]);
-$username = $ep->remove($_POST["userName"]);
-$accountID = $ep->remove($_POST["accountID"]);
-if($ep->remove($_POST["secret"]) != "Wmfd2893gb7") exit("-1");
-//Checking if banned
-if($gs->isBanned($accountID, "comment")) exit("-10");
-//User check
-if($accountID != "" && is_numeric($accountID) && $comment != "" && $GJPCheck->check($gjp, $accountID)){
-	//Command
-	if($cmds->doProfileCommands($accountID, base64_decode($comment))) exit("-1");
-	//Commenting
-	$query = $db->prepare("INSERT INTO accComments (username, comment, accountID, timestamp)
-										VALUES (:username, :comment, :accountID, :uploadDate)");
-	$query->execute([':username' => $username, ':comment' => $comment, ':accountID' => $accountID, ':uploadDate' => time()]);
+$id = $ep->remove($_POST["accountID"]);
+$userID = $mainLib->getUserID($id, $userName);
+$uploadDate = time();
+//usercheck
+if($id != "" AND $comment != "" AND $GJPCheck->check($gjp,$id) == 1){
+	$decodecomment = base64_decode($comment);
+	if($cmds->doProfileCommands($id, $decodecomment)){
+		exit("-1");
+	}
+	$query = $db->prepare("INSERT INTO acccomments (userName, comment, userID, timeStamp)
+										VALUES (:userName, :comment, :userID, :uploadDate)");
+	$query->execute([':userName' => $userName, ':comment' => $comment, ':userID' => $userID, ':uploadDate' => $uploadDate]);
 	echo 1;
 }else{
-	//Failure
-	exit("-1");
+	echo -1;
 }
 ?>
