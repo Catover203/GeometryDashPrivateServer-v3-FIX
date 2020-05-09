@@ -48,3 +48,4 @@ if($accountID && is_numeric($accountID) && $comment){
 	//Failure
 	exit("-1");
 }
+?>
