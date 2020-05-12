@@ -816,3 +816,19 @@ class mainLib {
 		$query->execute([':account' => $accountID, ':level' => $levelID, ':diff' => $difficulty, ':stars' => $stars, ':feat' => $feat, ':auto' => $auto, ':demon' => $demon, ':timestamp' => time()]);
 	}
 }
+	public function isBanned($pattern, $banCase){
+		include __DIR__ . "/connection.php";
+		switch($banCase){
+			case "comment":
+				$query = $db->prepare("SELECT isCommentBanned FROM users WHERE extID = :pattern OR userID = :pattern OR username LIKE :pattern LIMIT 1");
+				$query->execute([':pattern' => $pattern]);
+				break;
+			case "account":
+				$query = $db->prepare("SELECT isBanned FROM accounts WHERE accountID = :pattern OR userID = :pattern OR username LIKE :pattern LIMIT 1");
+				$query->execute([':pattern' => $pattern]);
+				break;
+			default:
+				return false;
+		}
+		return $query->fetchColumn();
+	}
