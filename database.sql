@@ -573,7 +573,8 @@ CREATE TABLE `users` (
   `chest1count` int(11) NOT NULL DEFAULT '0',
   `chest2count` int(11) NOT NULL DEFAULT '0',
   `isBanned` int(11) NOT NULL DEFAULT '0',
-  `isCreatorBanned` int(11) NOT NULL DEFAULT '0'
+  `isCreatorBanned` int(11) NOT NULL DEFAULT '0',
+  `isCommentBanned` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -783,7 +784,8 @@ ALTER TABLE `users`
   ADD KEY `orbs` (`orbs`),
   ADD KEY `completedLvls` (`completedLvls`),
   ADD KEY `isBanned` (`isBanned`),
-  ADD KEY `isCreatorBanned` (`isCreatorBanned`);
+  ADD KEY `isCreatorBanned` (`isCreatorBanned`),
+  ADD KEY `isCommentBanned` (`isCommentBanned`);
 
 --
 -- AUTO_INCREMENT cho các bảng đã đổ
@@ -944,7 +946,6 @@ ALTER TABLE `songs`
 --
 ALTER TABLE `suggest`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT cho bảng `users`
 --
