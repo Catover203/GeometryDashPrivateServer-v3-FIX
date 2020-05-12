@@ -16,6 +16,8 @@ $comment = $ep->remove($_POST["comment"]);
 $id = $ep->remove($_POST["accountID"]);
 $userID = $mainLib->getUserID($id, $userName);
 $uploadDate = time();
+//check is banned
+if($gs->isBanned($accountID, "comment")) exit("-10");
 //usercheck
 if($id != "" AND $comment != "" AND $GJPCheck->check($gjp,$id) == 1){
 	$decodecomment = base64_decode($comment);
