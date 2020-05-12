@@ -39,6 +39,7 @@ if(!empty($_POST["accountID"]) AND $_POST["accountID"]!="0"){
 		exit("-1");
 	}
 }
+if($gs->isBanned($accountID, "comment")) exit("-10");
 $userID = $mainLib->getUserID($id, $userName);
 $uploadDate = time();
 $decodecomment = base64_decode($comment);
