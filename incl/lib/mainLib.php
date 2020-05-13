@@ -823,6 +823,10 @@ class mainLib {
 				$query = $db->prepare("SELECT isCommentBanned FROM users WHERE extID = :pattern OR userID = :pattern OR username LIKE :pattern LIMIT 1");
 				$query->execute([':pattern' => $pattern]);
 				break;
+				case "acccomment":
+				$query = $db->prepare("SELECT isAccCommentBanned FROM users WHERE extID = :pattern OR userID = :pattern OR username LIKE :pattern LIMIT 1");
+				$query->execute([':pattern' => $pattern]);
+				break;
 			case "account":
 				$query = $db->prepare("SELECT isBanned FROM accounts WHERE accountID = :pattern OR userID = :pattern OR username LIKE :pattern LIMIT 1");
 				$query->execute([':pattern' => $pattern]);
