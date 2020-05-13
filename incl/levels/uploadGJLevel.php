@@ -10,6 +10,7 @@ $ep = new exploitPatch();
 //here im getting all the data
 $gjp = $ep->remove($_POST["gjp"]);
 $gameVersion = $ep->remove($_POST["gameVersion"]);
+
 if(!empty($_POST["binaryVersion"])){
 	$binaryVersion = $ep->remove($_POST["binaryVersion"]);	
 }else{
@@ -115,6 +116,7 @@ if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
 	$hostname = $_SERVER['REMOTE_ADDR'];
 }
 $userID = $mainLib->getUserID($id, $userName);
+if($gs->isBanned($userName, "upload")) exit("-1");
 $uploadDate = time();
 $query = $db->prepare("SELECT count(*) FROM levels WHERE uploadDate > :time AND (userID = :userID OR hostname = :ip)");
 $query->execute([':time' => $uploadDate - 60, ':userID' => $userID, ':ip' => $hostname]);
