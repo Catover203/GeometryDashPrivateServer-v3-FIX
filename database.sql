@@ -574,6 +574,7 @@ CREATE TABLE `users` (
   `chest2count` int(11) NOT NULL DEFAULT '0',
   `isBanned` int(11) NOT NULL DEFAULT '0',
   `isCreatorBanned` int(11) NOT NULL DEFAULT '0',
+  `isLevelUploadBanned` tinyint(1) NOT NULL DEFAULT '0',
   `isAccCommentBanned` tinyint(1) NOT NULL DEFAULT '0',
   `isCommentBanned` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
