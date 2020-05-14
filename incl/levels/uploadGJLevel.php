@@ -117,7 +117,7 @@ if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
 }
 $userID = $mainLib->getUserID($id, $userName);
 if($gs->isBanned($userName, "upload")) exit("-1");
-$uploadDate = time();
+$uploadDate = date("YmdHis", time());
 $query = $db->prepare("SELECT count(*) FROM levels WHERE uploadDate > :time AND (userID = :userID OR hostname = :ip)");
 $query->execute([':time' => $uploadDate - 60, ':userID' => $userID, ':ip' => $hostname]);
 if($query->fetchColumn() > 0){
