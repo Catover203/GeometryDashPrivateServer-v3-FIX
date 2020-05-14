@@ -73,6 +73,13 @@ CREATE TABLE `artists` (
   PRIMARY KEY (`ID`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
+CREATE TABLE `bannedArtists` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `authorID` int(11) NOT NULL,
+  `authorName` varchar(69) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+
 CREATE TABLE `bannedips` (
   `IP` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '127.0.0.1',
   `ID` int(11) NOT NULL
