@@ -1,11 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 4.7.4
--- https://www.phpmyadmin.net/
---
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 06, 2020 lúc 05:52 AM
--- Phiên bản máy phục vụ: 10.1.29-MariaDB
--- Phiên bản PHP: 7.1.12
 -- Catover203CODE = DECODE{TYPE=COCD;Un-php-to=COCD_then=reset_;*SSL|SECURITE_SYSTEM_LAYER=ON|*=>securite_and_cant_hack}('JHhbgHHVFRfxGCFgcd325e5FVHYUgtfgvHYTYTTFV')[powering='not-show-to-all']
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -19,15 +11,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
---
--- Cơ sở dữ liệu: `gdps`
---
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `acccomments`
---
+-- database: `gdps`
 
 CREATE TABLE `acccomments` (
   `userID` int(11) NOT NULL,
@@ -39,12 +23,6 @@ CREATE TABLE `acccomments` (
   `likes` int(11) NOT NULL DEFAULT '0',
   `isSpam` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `accounts`
---
 
 CREATE TABLE `accounts` (
   `userName` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
@@ -75,12 +53,6 @@ CREATE TABLE `accounts` (
   `usernameChangeDate` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `actions`
---
-
 CREATE TABLE `actions` (
   `ID` int(11) NOT NULL,
   `type` int(11) NOT NULL DEFAULT '0',
@@ -94,34 +66,23 @@ CREATE TABLE `actions` (
   `account` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `bannedips`
---
+CREATE TABLE `artists` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `author` text COLLATE utf8_unicode_ci NOT NULL,
+  `YouTube` varchar(69) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 CREATE TABLE `bannedips` (
   `IP` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '127.0.0.1',
   `ID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `blocks`
---
-
 CREATE TABLE `blocks` (
   `ID` int(11) NOT NULL,
   `person1` int(11) NOT NULL,
   `person2` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `comments`
---
 
 CREATE TABLE `comments` (
   `userID` int(11) NOT NULL,
@@ -136,23 +97,11 @@ CREATE TABLE `comments` (
   `isSpam` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `cpshares`
---
-
 CREATE TABLE `cpshares` (
   `shareID` int(11) NOT NULL,
   `levelID` int(11) NOT NULL,
   `userID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `dailyfeatures`
---
 
 CREATE TABLE `dailyfeatures` (
   `feaID` int(11) NOT NULL,
@@ -160,12 +109,6 @@ CREATE TABLE `dailyfeatures` (
   `timestamp` int(11) NOT NULL,
   `type` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `friendreqs`
---
 
 CREATE TABLE `friendreqs` (
   `accountID` int(11) NOT NULL,
@@ -176,12 +119,6 @@ CREATE TABLE `friendreqs` (
   `isNew` tinyint(1) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `friendships`
---
-
 CREATE TABLE `friendships` (
   `ID` int(11) NOT NULL,
   `person1` int(11) NOT NULL,
@@ -189,12 +126,6 @@ CREATE TABLE `friendships` (
   `isNew1` int(11) NOT NULL,
   `isNew2` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `gauntlets`
---
 
 CREATE TABLE `gauntlets` (
   `ID` int(11) NOT NULL,
@@ -204,12 +135,6 @@ CREATE TABLE `gauntlets` (
   `level4` int(11) NOT NULL,
   `level5` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `levels`
---
 
 CREATE TABLE `levels` (
   `gameVersion` int(11) NOT NULL,
@@ -257,12 +182,6 @@ CREATE TABLE `levels` (
   `isLDM` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `levelscores`
---
-
 CREATE TABLE `levelscores` (
   `scoreID` int(11) NOT NULL,
   `accountID` int(11) NOT NULL,
@@ -272,12 +191,6 @@ CREATE TABLE `levelscores` (
   `attempts` int(11) NOT NULL DEFAULT '0',
   `coins` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `links`
---
 
 CREATE TABLE `links` (
   `ID` int(11) NOT NULL,
@@ -289,12 +202,6 @@ CREATE TABLE `links` (
   `targetUserID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `mappacks`
---
-
 CREATE TABLE `mappacks` (
   `ID` int(11) NOT NULL,
   `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
@@ -305,12 +212,6 @@ CREATE TABLE `mappacks` (
   `rgbcolors` varchar(11) COLLATE utf8_unicode_ci NOT NULL COMMENT 'entered as R,G,B',
   `colors2` varchar(11) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'none'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `messages`
---
 
 CREATE TABLE `messages` (
   `userID` int(11) NOT NULL,
@@ -324,12 +225,6 @@ CREATE TABLE `messages` (
   `secret` varchar(25) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'unused',
   `isNew` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `modactions`
---
 
 CREATE TABLE `modactions` (
   `ID` int(11) NOT NULL,
@@ -345,22 +240,10 @@ CREATE TABLE `modactions` (
   `value7` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `modipperms`
---
-
 CREATE TABLE `modipperms` (
   `categoryID` int(11) NOT NULL,
   `actionFreeCopy` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `modips`
---
 
 CREATE TABLE `modips` (
   `ID` int(11) NOT NULL,
@@ -370,23 +253,11 @@ CREATE TABLE `modips` (
   `modipCategory` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `poll`
---
-
 CREATE TABLE `poll` (
   `accountID` int(11) NOT NULL,
   `pollOption` varchar(255) NOT NULL,
   `optionID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `quests`
---
 
 CREATE TABLE `quests` (
   `ID` int(11) NOT NULL,
@@ -396,10 +267,6 @@ CREATE TABLE `quests` (
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Đang đổ dữ liệu cho bảng `quests`
---
-
 INSERT INTO `quests` (`ID`, `type`, `amount`, `reward`, `name`) VALUES
 (1, 1, 500, 50, 'Q2'),
 (2, 2, 10, 50, 'Q1'),
@@ -408,35 +275,17 @@ INSERT INTO `quests` (`ID`, `type`, `amount`, `reward`, `name`) VALUES
 (5, 2, 10, 50, 'Q5'),
 (6, 3, 20, 50, 'Q6');
 
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `reports`
---
-
 CREATE TABLE `reports` (
   `ID` int(11) NOT NULL,
   `levelID` int(11) NOT NULL,
   `hostname` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `roleassign`
---
-
 CREATE TABLE `roleassign` (
   `assignID` bigint(20) NOT NULL,
   `roleID` bigint(20) NOT NULL,
   `accountID` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `roles`
---
 
 CREATE TABLE `roles` (
   `roleID` bigint(11) NOT NULL,
@@ -482,10 +331,6 @@ CREATE TABLE `roles` (
   `modBadgeLevel` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Đang đổ dữ liệu cho bảng `roles`
---
-
 INSERT INTO `roles` (`roleID`, `priority`, `roleName`, `commandRate`, `commandFeature`, `commandEpic`, `commandUnepic`, `commandVerifycoins`, `commandDaily`, `commandWeekly`, `commandDelete`, `commandSetacc`, `commandRenameOwn`, `commandRenameAll`, `commandPassOwn`, `commandPassAll`, `commandDescriptionOwn`, `commandDescriptionAll`, `commandPublicOwn`, `commandPublicAll`, `commandUnlistOwn`, `commandUnlistAll`, `commandSharecpOwn`, `commandSharecpAll`, `commandSongOwn`, `commandSongAll`, `profilecommandDiscord`, `actionRateDemon`, `actionRateStars`, `actionRateDifficulty`, `actionRequestMod`, `actionSuggestRating`, `toolLeaderboardsban`, `toolPackcreate`, `toolModactions`, `toolSuggestlist`, `dashboardModTools`, `modipCategory`, `isDefault`, `commentColor`, `modBadgeLevel`) VALUES
 (1, 1, 'Admin', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '000,242,255', 2),
 (2, 1, 'Admin helper', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '255,115,038', 2),
@@ -493,12 +338,6 @@ INSERT INTO `roles` (`roleID`, `priority`, `roleName`, `commandRate`, `commandFe
 (4, 1, 'Elder Moderator Super', 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, '123,66,245', 2),
 (5, 1, 'Moderator', 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, '255,255,255', 1),
 (6, 1, 'Moderator Super', 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, '221,66,245', 1);
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `songs`
---
 
 CREATE TABLE `songs` (
   `ID` int(11) NOT NULL,
@@ -513,12 +352,6 @@ CREATE TABLE `songs` (
   `reuploadTime` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `suggest`
---
-
 CREATE TABLE `suggest` (
   `ID` int(11) NOT NULL,
   `suggestBy` int(11) NOT NULL DEFAULT '0',
@@ -530,12 +363,6 @@ CREATE TABLE `suggest` (
   `suggestDemon` int(11) NOT NULL DEFAULT '0',
   `timestamp` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `users`
---
 
 CREATE TABLE `users` (
   `isRegistered` int(11) NOT NULL,
@@ -579,75 +406,41 @@ CREATE TABLE `users` (
   `isCommentBanned` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Chỉ mục cho các bảng đã đổ
---
-
---
--- Chỉ mục cho bảng `acccomments`
---
 ALTER TABLE `acccomments`
   ADD PRIMARY KEY (`commentID`),
   ADD KEY `userID` (`userID`);
 
---
--- Chỉ mục cho bảng `accounts`
---
 ALTER TABLE `accounts`
   ADD PRIMARY KEY (`accountID`),
   ADD UNIQUE KEY `userName` (`userName`),
   ADD KEY `isAdmin` (`isAdmin`),
   ADD KEY `userID` (`userID`);
 
---
--- Chỉ mục cho bảng `actions`
---
 ALTER TABLE `actions`
   ADD PRIMARY KEY (`ID`),
   ADD KEY `type` (`type`);
 
---
--- Chỉ mục cho bảng `bannedips`
---
 ALTER TABLE `bannedips`
   ADD PRIMARY KEY (`ID`);
 
---
--- Chỉ mục cho bảng `blocks`
---
 ALTER TABLE `blocks`
   ADD PRIMARY KEY (`ID`),
   ADD UNIQUE KEY `ID` (`ID`);
 
---
--- Chỉ mục cho bảng `comments`
---
 ALTER TABLE `comments`
   ADD PRIMARY KEY (`commentID`),
   ADD KEY `levelID` (`levelID`);
 
---
--- Chỉ mục cho bảng `cpshares`
---
 ALTER TABLE `cpshares`
   ADD PRIMARY KEY (`shareID`);
 
---
--- Chỉ mục cho bảng `dailyfeatures`
---
 ALTER TABLE `dailyfeatures`
   ADD PRIMARY KEY (`feaID`);
 
---
--- Chỉ mục cho bảng `friendreqs`
---
 ALTER TABLE `friendreqs`
   ADD PRIMARY KEY (`ID`),
   ADD KEY `toAccountID` (`toAccountID`);
 
---
--- Chỉ mục cho bảng `friendships`
---
 ALTER TABLE `friendships`
   ADD PRIMARY KEY (`ID`),
   ADD KEY `person1` (`person1`),
@@ -655,16 +448,10 @@ ALTER TABLE `friendships`
   ADD KEY `isNew1` (`isNew1`),
   ADD KEY `isNew2` (`isNew2`);
 
---
--- Chỉ mục cho bảng `gauntlets`
---
 ALTER TABLE `gauntlets`
   ADD PRIMARY KEY (`ID`),
   ADD KEY `level5` (`level5`);
 
---
--- Chỉ mục cho bảng `levels`
---
 ALTER TABLE `levels`
   ADD PRIMARY KEY (`levelID`),
   ADD KEY `levelID` (`levelID`),
@@ -682,96 +469,51 @@ ALTER TABLE `levels`
   ADD KEY `levelLength` (`levelLength`),
   ADD KEY `twoPlayer` (`twoPlayer`);
 
---
--- Chỉ mục cho bảng `levelscores`
---
 ALTER TABLE `levelscores`
   ADD PRIMARY KEY (`scoreID`),
   ADD KEY `levelID` (`levelID`);
 
---
--- Chỉ mục cho bảng `links`
---
 ALTER TABLE `links`
   ADD PRIMARY KEY (`ID`);
 
---
--- Chỉ mục cho bảng `mappacks`
---
 ALTER TABLE `mappacks`
   ADD PRIMARY KEY (`ID`);
 
---
--- Chỉ mục cho bảng `messages`
---
 ALTER TABLE `messages`
   ADD PRIMARY KEY (`messageID`),
   ADD KEY `toAccountID` (`toAccountID`);
 
---
--- Chỉ mục cho bảng `modactions`
---
 ALTER TABLE `modactions`
   ADD PRIMARY KEY (`ID`);
 
---
--- Chỉ mục cho bảng `modipperms`
---
 ALTER TABLE `modipperms`
   ADD PRIMARY KEY (`categoryID`);
 
---
--- Chỉ mục cho bảng `modips`
---
 ALTER TABLE `modips`
   ADD PRIMARY KEY (`ID`);
 
---
--- Chỉ mục cho bảng `poll`
---
 ALTER TABLE `poll`
   ADD PRIMARY KEY (`optionID`);
 
---
--- Chỉ mục cho bảng `quests`
---
 ALTER TABLE `quests`
   ADD PRIMARY KEY (`ID`);
 
---
--- Chỉ mục cho bảng `reports`
---
 ALTER TABLE `reports`
   ADD PRIMARY KEY (`ID`);
 
---
--- Chỉ mục cho bảng `roleassign`
---
 ALTER TABLE `roleassign`
   ADD PRIMARY KEY (`assignID`);
 
---
--- Chỉ mục cho bảng `roles`
---
 ALTER TABLE `roles`
   ADD PRIMARY KEY (`roleID`);
 
---
--- Chỉ mục cho bảng `songs`
---
 ALTER TABLE `songs`
   ADD PRIMARY KEY (`ID`),
   ADD KEY `name` (`name`);
 
---
--- Chỉ mục cho bảng `suggest`
---
 ALTER TABLE `suggest`
   ADD PRIMARY KEY (`ID`);
 
---
--- Chỉ mục cho bảng `users`
---
 ALTER TABLE `users`
   ADD PRIMARY KEY (`userID`),
   ADD KEY `userID` (`userID`),
@@ -789,168 +531,84 @@ ALTER TABLE `users`
   ADD KEY `isCreatorBanned` (`isCreatorBanned`),
   ADD KEY `isCommentBanned` (`isCommentBanned`);
 
---
--- AUTO_INCREMENT cho các bảng đã đổ
---
-
---
--- AUTO_INCREMENT cho bảng `acccomments`
---
 ALTER TABLE `acccomments`
   MODIFY `commentID` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT cho bảng `accounts`
---
 ALTER TABLE `accounts`
   MODIFY `accountID` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT cho bảng `actions`
---
 ALTER TABLE `actions`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT cho bảng `bannedips`
---
 ALTER TABLE `bannedips`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT cho bảng `blocks`
---
 ALTER TABLE `blocks`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT cho bảng `comments`
---
 ALTER TABLE `comments`
   MODIFY `commentID` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT cho bảng `cpshares`
---
 ALTER TABLE `cpshares`
   MODIFY `shareID` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT cho bảng `dailyfeatures`
---
 ALTER TABLE `dailyfeatures`
   MODIFY `feaID` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT cho bảng `friendreqs`
---
 ALTER TABLE `friendreqs`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
---
--- AUTO_INCREMENT cho bảng `friendships`
---
 ALTER TABLE `friendships`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT cho bảng `gauntlets`
---
 ALTER TABLE `gauntlets`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT cho bảng `levels`
---
 ALTER TABLE `levels`
   MODIFY `levelID` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT cho bảng `levelscores`
---
 ALTER TABLE `levelscores`
   MODIFY `scoreID` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT cho bảng `links`
---
 ALTER TABLE `links`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT cho bảng `mappacks`
---
 ALTER TABLE `mappacks`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT cho bảng `messages`
---
 ALTER TABLE `messages`
   MODIFY `messageID` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT cho bảng `modactions`
---
 ALTER TABLE `modactions`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT cho bảng `modipperms`
---
 ALTER TABLE `modipperms`
   MODIFY `categoryID` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT cho bảng `modips`
---
 ALTER TABLE `modips`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT cho bảng `poll`
---
 ALTER TABLE `poll`
   MODIFY `optionID` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT cho bảng `quests`
---
 ALTER TABLE `quests`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
---
--- AUTO_INCREMENT cho bảng `reports`
---
 ALTER TABLE `reports`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT cho bảng `roleassign`
---
 ALTER TABLE `roleassign`
   MODIFY `assignID` bigint(20) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT cho bảng `roles`
---
 ALTER TABLE `roles`
   MODIFY `roleID` bigint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
---
--- AUTO_INCREMENT cho bảng `songs`
---
 ALTER TABLE `songs`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT cho bảng `suggest`
---
 ALTER TABLE `suggest`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT cho bảng `users`
---
+
 ALTER TABLE `users`
   MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
