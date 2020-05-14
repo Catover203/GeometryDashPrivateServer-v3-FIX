@@ -62,7 +62,7 @@ if(!is_numeric($levelID)){
 		}
 		//getting the days since uploaded... or outputting the date in Y-M-D format at least for now...
 		$uploadDate = $gs->convertDate(date("Y-m-d H:i:s", $result["uploadDate"]));
-		$updateDate = $gs->convertDate(date("Y-m-d H:i:s", $result["updateDate"]));
+		$updateDate = $gs->convertDate(date("Y/m/d H:i:s", $result["updateDate"]));
 		//password xor
 		$pass = $result["password"];
 		$desc = $result["levelDesc"];
