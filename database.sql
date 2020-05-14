@@ -19,7 +19,7 @@ CREATE TABLE `acccomments` (
   `comment` longtext COLLATE utf8_unicode_ci NOT NULL,
   `secret` varchar(10) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'unused',
   `commentID` int(11) NOT NULL,
-  `timestamp` int(11) NOT NULL,
+  `timestamp` TIMESTAMP(6) NOT NULL,
   `likes` int(11) NOT NULL DEFAULT '0',
   `isSpam` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
