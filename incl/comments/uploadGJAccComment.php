@@ -15,7 +15,7 @@ $userName = $ep->remove($_POST["userName"]);
 $comment = $ep->remove($_POST["comment"]);
 $id = $ep->remove($_POST["accountID"]);
 $userID = $mainLib->getUserID($id, $userName);
-$uploadDate = time();
+$uploadDate = date("Y-m-d H:i:s", time());
 //check is banned
 if($gs->isBanned($accountID, "acccomment")) exit("-10");
 //usercheck
