@@ -844,7 +844,6 @@ class mainLib {
 		$query = $db->prepare($query);
 		$query->execute([':account' => $accountID, ':level' => $levelID, ':diff' => $difficulty, ':stars' => $stars, ':feat' => $feat, ':auto' => $auto, ':demon' => $demon, ':timestamp' => time()]);
 	}
-}
 	public function isBanned($pattern, $banCase){
 		include __DIR__ . "/connection.php";
 		switch($banCase){
@@ -869,3 +868,5 @@ class mainLib {
 		}
 		return $query->fetchColumn();
 	}
+}
+?>
