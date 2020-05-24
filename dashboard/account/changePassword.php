@@ -26,7 +26,7 @@ if(isset($_GET["e"]) && isset($_GET["u"]) && isset($_GET["o"]) && isset($_GET["n
 		//Creating pass hash
 		$passhash = password_hash($newPassword, PASSWORD_DEFAULT);
 		//Updating password
-		$query = $db->prepare("UPDATE accounts SET password = :password WHERE username = :username AND email = :email");	
+		$query = $db->prepare("UPDATE accounts SET password = :password WHERE userName = :username AND email = :email");	
 		$query->execute([':password' => $passhash, ':username' => $username, ':email' => $email]);
 		$dl->printBox("<h1>".$dl->getLocalizedString("changePassword")."</h1>
 		<p>".$dl->getLocalizedString("passwordChanged")."</p>","account");
@@ -47,7 +47,7 @@ if(isset($_POST["username"]) && isset($_POST["newPassword"]) && isset($_POST["ol
 	$baseUsername = base64_encode($username);
 	$basePassword = base64_encode($oldPassword);
 	$baseNewPassword = base64_encode($newPassword);
-	$query = $db->prepare("SELECT email FROM accounts WHERE username = :username LIMIT 1");	
+	$query = $db->prepare("SELECT email FROM accounts WHERE userName = :username LIMIT 1");	
 	$query->execute([':username' => $username]);
 	$email = $query->fetchColumn();
 	$baseEmail = base64_encode($email);
@@ -72,7 +72,7 @@ if(isset($_POST["username"]) && isset($_POST["newPassword"]) && isset($_POST["ol
 			//Creating pass hash
 			$passhash = password_hash($newPassword, PASSWORD_DEFAULT);
 			//Updating password
-			$query = $db->prepare("UPDATE accounts SET password = :password WHERE username = :username AND email = :email");
+			$query = $db->prepare("UPDATE accounts SET password = :password WHERE userName = :username AND email = :email");
 			$query->execute([':password' => $passhash, ':username' => $username, ':email' => $email]);
 			$dl->printBox("<h1>".$dl->getLocalizedString("changePassword")."</h1>
 			<p>".$dl->getLocalizedString("passwordChanged")."</p>","account");
