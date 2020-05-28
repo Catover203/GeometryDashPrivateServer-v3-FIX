@@ -14,7 +14,7 @@ if(isset($_POST["userName"]) && $_POST["userName"] != "" && isset($_POST["passwo
 	$email = $ep->remove($_POST["email"]);
 	$baseEmail = base64_encode($email);
 	//Checking if name is taken
-	$query = $db->prepare("SELECT count(*) FROM accounts WHERE username LIKE :username");
+	$query = $db->prepare("SELECT count(*) FROM accounts WHERE userName LIKE :username");
 	$query->execute([':username' => $username]);
 	if($query->fetchColumn() > 0){
 		//Taken
@@ -29,7 +29,7 @@ if(isset($_POST["userName"]) && $_POST["userName"] != "" && isset($_POST["passwo
 			$body = "Username: $username\nPassword: $password\n\nActivation link: ".dirname($URI)."/dashboard/account/activate.php?h=$baseHash&e=$baseEmail";
 			if(PEAR::isError($gs->sendMail($emailMail, $email, "Account activation", $body))) exit("-1");
 			//Registering
-			$query = $db->prepare("INSERT INTO accounts (username, password, email, registerDate, hash)
+			$query = $db->prepare("INSERT INTO accounts (userName, password, email, registerDate, hash)
 			VALUES (:username, :password, :email, :time, :hash)");
 			$query->execute([':username' => $username, ':password' => $hashpass, ':email' => $email, ':time' => time(), ':hash' => $hash]);
 		}elseif(!$emailEnabled){
