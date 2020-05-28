@@ -22,7 +22,7 @@ Using this for cloud save encryption - https://github.com/defuse/php-encryption 
 
 Jscolor (color picker in packCreate.php) - http://jscolor.com/
 
-Fix Gdps system by Catover203 and suport elder mod
+Fix Gdps by Catover203 and suport elder mod, email, reset passsword, ect...
 
 Most of the stuff in generateHash.php has been figured out by pavlukivan and Italian APK Downloader, so credits to them
 
