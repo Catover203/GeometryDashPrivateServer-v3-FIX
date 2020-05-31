@@ -19,13 +19,13 @@ if(isset($_GET["e"]) && isset($_GET["u"]) && isset($_GET["h"]) && isset($_GET["n
 	$hash = $ep->remove(base64_decode($_GET["h"]));
 	$newPassword = $ep->remove(base64_decode($_GET["n"]));
 	//Checking password
-    $query = $db->prepare("SELECT count(*) FROM accounts WHERE username = :username AND email = :email AND hash = :hash LIMIT 1");
+    $query = $db->prepare("SELECT count(*) FROM accounts WHERE userName = :username AND email = :email AND hash = :hash LIMIT 1");
     $query->execute([':username' => $username, ':email' => $email, ':hash' => $hash]);
 	if($query->fetchColumn() > 0){
 		//Creating pass hash
 		$passhash = password_hash($newPassword, PASSWORD_DEFAULT);
 		//Updating password
-		$query = $db->prepare("UPDATE accounts SET password = :password WHERE username = :username AND email = :email AND hash = :hash");	
+		$query = $db->prepare("UPDATE accounts SET password = :password WHERE userName = :username AND email = :email AND hash = :hash");	
 		$query->execute([':password' => $passhash, ':username' => $username, ':email' => $email, ':hash' => $hash]);
 		$dl->printBox("<h1>".$dl->getLocalizedString("lostPassword")."</h1>
 		<p>".$dl->getLocalizedString("passwordChanged")."</p>","account");
@@ -42,7 +42,7 @@ $username = $ep->remove($_POST["username"]);
 $newPassword = $_POST["newPassword"];
 $baseUsername = base64_encode($username);
 $baseNewPassword = base64_encode($newPassword);
-$query = $db->prepare("SELECT email FROM accounts WHERE username = :username LIMIT 1");	
+$query = $db->prepare("SELECT email FROM accounts WHERE userName = :username LIMIT 1");	
 $query->execute([':username' => $username]);
 $email = $query->fetchColumn();
 $baseEmail = base64_encode($email);
@@ -55,7 +55,7 @@ if(isset($_POST["username"]) && isset($_POST["newPassword"])){
 	$baseHash = base64_encode($hash);
 	//Sending email
 	$URI = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-	$body = dirname($URI)."/dashboard/account/lostPassword.php?h=$baseHash&e=$baseEmail&n=$baseNewPassword&u=$baseUsername.";
+	$body = dirname($URI)."/lostpass.php?h=".$baseHash."&e=".$baseEmail."&n=".$baseNewPassword."&u=".$baseUsername.;
 	$mail = $gs->sendMail($emailMail, $email, "Lost password", $body);
 	if(PEAR::isError($mail)){
 		//Printing error
@@ -79,23 +79,23 @@ if(isset($_POST["username"]) && isset($_POST["newPassword"])){
 }else{
 	if(!$emailEnabled){
 		//Printing page
-		$dl->printBox('<h1>'.$dl->getLocalizedString("lostPassword").'</h1>
+		$dl->printBox('<h1>lostPassword</h1>
 					<form action="" method="post">
 						<div class="form-group">
-							<input type="text" class="form-control" id="changePasswordEmail" name="email" placeholder="'.$dl->getLocalizedString("lostPasswordEmailFieldPlaceholder").'"><br>
-							<input type="password" class="form-control" id="changeUsernameNewPassword" name="newPassword" placeholder="'.$dl->getLocalizedString("changePasswordNewPasswordFieldPlaceholder").'">
+							<input type="text" class="form-control" id="changePasswordEmail" name="email" placeholder="Email"><br>
+							<input type="password" class="form-control" id="changeUsernameNewPassword" name="newPassword" placeholder="New Password">
 						</div>
-						<button type="submit" class="btn btn-primary btn-block">'.$dl->getLocalizedString("changeBTN").'</button>
+						<button type="submit" class="btn btn-primary btn-block">changeBTN</button>
 					</form>',"account");
 	}elseif($emailEnabled){
 		//Printing page
-		$dl->printBox('<h1>'.$dl->getLocalizedString("lostPassword").'</h1>
+		$dl->printBox(<h1>lostPassword</h1>
 					<form action="" method="post">
 						<div class="form-group">
-							<input type="text" class="form-control" id="changePasswordUsername" name="username" placeholder="'.$dl->getLocalizedString("changePasswordUserNameFieldPlaceholder").'"><br>
-							<input type="password" class="form-control" id="changeUsernameNewPassword" name="newPassword" placeholder="'.$dl->getLocalizedString("changePasswordNewPasswordFieldPlaceholder").'">
+							<input type="text" class="form-control" id="changePasswordUsername" name="username" placeholder="UserName"><br>
+							<input type="password" class="form-control" id="changeUsernameNewPassword" name="newPassword" placeholder="New Password").'">
 						</div>
-						<button type="submit" class="btn btn-primary btn-block">'.$dl->getLocalizedString("changeBTN").'</button>
+						<button type="submit" class="btn btn-primary btn-block">change</button>
 					</form>',"account");
 	}
 }
