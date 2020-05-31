@@ -26,7 +26,7 @@ if(isset($_POST["userName"]) && $_POST["userName"] != "" && isset($_POST["passwo
 			$hash = md5(rand(0, 1000));
 			$baseHash = base64_encode($hash);
 			$URI = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-			$body = "Username: $username\nPassword: $password\n\nActivation link: ".dirname($URI)."/dashboard/account/activate.php?h=$baseHash&e=$baseEmail";
+			$body = "Username: ".$username." | Password: ".$password." | Activation link: ".dirname($URI)."/dashboard/account/activate.php?h=".$baseHash."&e=".$baseEmail;
 			if(PEAR::isError($gs->sendMail($emailMail, $email, "Account activation", $body))) exit("-1");
 			//Registering
 			$query = $db->prepare("INSERT INTO accounts (userName, password, email, registerDate, hash)
