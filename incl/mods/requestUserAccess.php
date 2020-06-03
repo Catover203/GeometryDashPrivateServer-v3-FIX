@@ -8,6 +8,7 @@ require_once "../lib/mainLib.php";
 $ep = new exploitPatch();
 $gs = new mainLib();
 $GJPCheck = new GJPCheck();
+$mod = 1;
 //Getting data
 $gjp = $ep->remove($_POST["gjp"]);
 $accountID = $ep->remove($_POST["accountID"]);
@@ -21,9 +22,9 @@ if($accountID && $gjp){
 		if(!$permState){
 			//Not moderator
 			exit("-1");
-		}elseif($accountID == 1 Or 2 Or 3){
-			//add AccountID here if you want to more elder mod
-			echo 2;
+		}elseif($mod == 1){
+			$elder = $gs->isElder2($accountID);
+			echo $elder;
 		}else{
 			echo $permState;
 		}
