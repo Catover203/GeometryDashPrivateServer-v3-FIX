@@ -13,6 +13,9 @@ Required version of PHP: 5.4+ (tested up to 7.3.11)
 4) ->PC:Edit the links in GeometryDash.exe (some are base64 encoded since 2.1, remember that)
 
    ->Android : edit link using hex editor to edit lib2coco.so with base64 then replace this file to apk using apk editor
+   
+   
+   NOTE: if your server not have PEAR.php, use this [PEAR.php](https://github.com/Catover203/phpMailer-class/blob/master/PEAR.php) from my phpMailer-class
 ### Credits
 Base for account settings and the private messaging system by someguy28
 
