@@ -860,6 +860,31 @@ class mainLib {
 		$query = $db->prepare($query);
 		$query->execute([':account' => $accountID, ':level' => $levelID, ':diff' => $difficulty, ':stars' => $stars, ':feat' => $feat, ':auto' => $auto, ':demon' => $demon, ':timestamp' => time()]);
 	}
+        	public function isElder($accountID){
+		include __DIR__ . "/connection.php";
+		$query = $db->prepare("SELECT roleID FROM roleassign WHERE accountID = :accountID");
+		$query->execute([':accountID' => $accountID]);
+		$roleID = $query->fetchAll();
+		$roleIDlist = "";
+		foreach($roleID as &$roleIDobject){
+			$roleIDlist .= $roleIDobject["roleID"] . ",";
+		}
+		$roleIDlist = substr($roleIDlist, 0, -1);
+		if($roleIDlist != ""){
+			$query = $db->prepare("SELECT modBadgeLevel FROM roles WHERE roleID IN ($roleIDlist) ORDER BY priority DESC");
+			$query->execute();
+			$roles = $query->fetchAll();
+			foreach($roles as &$role){
+				if($role["modBadgeLevel"] != "2"){
+					return "1";
+				}
+                                else
+                                {
+                                return "2";
+                                }
+			}
+		}
+	}
 	public function isBanned($pattern, $banCase){
 		include __DIR__ . "/connection.php";
 		switch($banCase){
