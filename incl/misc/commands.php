@@ -81,6 +81,13 @@ class Commands {
 			$query->execute([':value' => "1", ':timestamp' => $uploadDate, ':id' => $accountID, ':levelID' => $levelID]);
 			return true;
 		}
+                	if(substr($comment,0,14) == '!unverifycoins' AND $gs->checkPermission($accountID, "commandVerifycoins")){
+			$query = $db->prepare("UPDATE levels SET starCoins='0' WHERE levelID = :levelID");
+			$query->execute([':levelID' => $levelID]);
+			$query = $db->prepare("INSERT INTO modactions (type, value, value3, timestamp, account) VALUES ('2', :value, :levelID, :timestamp, :id)");
+			$query->execute([':value' => "0", ':timestamp' => $uploadDate, ':id' => $accountID, ':levelID' => $levelID]);
+			return true;
+		}
 		if(substr($comment,0,6) == '!daily' AND $gs->checkPermission($accountID, "commandDaily")){
 			$query = $db->prepare("SELECT count(*) FROM dailyfeatures WHERE levelID = :level AND type = 0");
 				$query->execute([':level' => $levelID]);
@@ -119,7 +126,7 @@ class Commands {
 			$query->execute([':value' => "1", ':timestamp' => $uploadDate, ':id' => $accountID, ':levelID' => $levelID, ':dailytime' => $timestamp]);
 			return true;
 		}
-		if(substr($comment,0,6) == '!delete' AND $gs->checkPermission($accountID, "commandDelete")){
+		if(substr($comment,0,7) == '!delete' AND $gs->checkPermission($accountID, "commandDelete")){
 			if(!is_numeric($levelID)){
 				return false;
 			}
