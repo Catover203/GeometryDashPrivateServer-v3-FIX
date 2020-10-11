@@ -14,11 +14,11 @@ SET time_zone = "+00:00";
 -- database: `gdps`
 
 CREATE TABLE `acccomments` (
-  `userID` int(11) NOT NULL,
+  `userID` bigint(255) NOT NULL,
   `userName` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `comment` longtext COLLATE utf8_unicode_ci NOT NULL,
   `secret` varchar(10) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'unused',
-  `commentID` int(11) NOT NULL,
+  `commentID` bigint(255) NOT NULL,
   `timestamp` int(11) NOT NULL,
   `likes` int(11) NOT NULL DEFAULT '0',
   `isSpam` int(11) NOT NULL DEFAULT '0'
@@ -29,10 +29,10 @@ CREATE TABLE `accounts` (
   `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `secret` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'unused',
-  `accountID` int(11) NOT NULL,
+  `accountID` bigint(255) NOT NULL,
   `saveData` longtext COLLATE utf8_unicode_ci NOT NULL,
   `isAdmin` int(11) NOT NULL DEFAULT '0',
-  `userID` int(11) NOT NULL,
+  `userID` bigint(255) NOT NULL,
   `friends` varchar(1024) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'unused',
   `blockedBy` varchar(1024) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'unused',
   `blocked` varchar(1024) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'unused',
@@ -69,14 +69,14 @@ CREATE TABLE `actions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE `artists` (
-  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `ID` bigint(255) NOT NULL AUTO_INCREMENT,
   `author` text COLLATE utf8_unicode_ci NOT NULL,
-  `YouTube` varchar(69) COLLATE utf8_unicode_ci NOT NULL,
+  `YouTube` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 CREATE TABLE `bannedArtists` (
-  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `ID` bigint(255) NOT NULL AUTO_INCREMENT,
   `authorID` int(11) NOT NULL,
   `authorName` varchar(69) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`ID`)
@@ -84,72 +84,72 @@ CREATE TABLE `bannedArtists` (
 
 CREATE TABLE `bannedips` (
   `IP` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '127.0.0.1',
-  `ID` int(11) NOT NULL
+  `ID` bigint(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE `blocks` (
-  `ID` int(11) NOT NULL,
-  `person1` int(11) NOT NULL,
-  `person2` int(11) NOT NULL
+  `ID` bigint(255) NOT NULL,
+  `person1` bigint(255) NOT NULL,
+  `person2` bigint(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE `comments` (
-  `userID` int(11) NOT NULL,
+  `userID` bigint(255) NOT NULL,
   `userName` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `comment` longtext COLLATE utf8_unicode_ci NOT NULL,
   `secret` varchar(10) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'none',
-  `levelID` int(11) NOT NULL,
-  `commentID` int(11) NOT NULL,
+  `levelID` bigint(255) NOT NULL,
+  `commentID` bigint(255) NOT NULL,
   `timestamp` int(11) NOT NULL,
-  `likes` int(11) NOT NULL DEFAULT '0',
+  `likes` bigint(11) NOT NULL DEFAULT '0',
   `percent` int(11) NOT NULL DEFAULT '0',
   `isSpam` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE `cpshares` (
-  `shareID` int(11) NOT NULL,
-  `levelID` int(11) NOT NULL,
-  `userID` int(11) NOT NULL
+  `shareID` bigint(255) NOT NULL,
+  `levelID` bigint(255) NOT NULL,
+  `userID` bigint(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE `dailyfeatures` (
-  `feaID` int(11) NOT NULL,
-  `levelID` int(11) NOT NULL,
+  `feaID` bigint(255) NOT NULL,
+  `levelID` bigint(255) NOT NULL,
   `timestamp` int(11) NOT NULL,
   `type` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE `friendreqs` (
-  `accountID` int(11) NOT NULL,
-  `toAccountID` int(11) NOT NULL,
+  `accountID` bigint(255) NOT NULL,
+  `toAccountID` bigint(255) NOT NULL,
   `comment` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
   `uploadDate` int(11) NOT NULL,
-  `ID` int(11) NOT NULL,
+  `ID` bigint(255) NOT NULL,
   `isNew` tinyint(1) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE `friendships` (
-  `ID` int(11) NOT NULL,
-  `person1` int(11) NOT NULL,
-  `person2` int(11) NOT NULL,
+  `ID` bigint(255) NOT NULL,
+  `person1` bigint(255) NOT NULL,
+  `person2` bigint(255) NOT NULL,
   `isNew1` int(11) NOT NULL,
   `isNew2` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE `gauntlets` (
-  `ID` int(11) NOT NULL,
-  `level1` int(11) NOT NULL,
-  `level2` int(11) NOT NULL,
-  `level3` int(11) NOT NULL,
-  `level4` int(11) NOT NULL,
-  `level5` int(11) NOT NULL
+  `ID` bigint(255) NOT NULL,
+  `level1` bigint(255) NOT NULL,
+  `level2` bigint(255) NOT NULL,
+  `level3` bigint(255) NOT NULL,
+  `level4` bigint(255) NOT NULL,
+  `level5` bigint(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE `levels` (
   `gameVersion` int(11) NOT NULL,
   `binaryVersion` int(11) NOT NULL DEFAULT '0',
   `userName` mediumtext COLLATE utf8_unicode_ci NOT NULL,
-  `levelID` int(11) NOT NULL,
+  `levelID` bigint(255) NOT NULL,
   `levelName` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `levelDesc` mediumtext COLLATE utf8_unicode_ci NOT NULL,
   `levelVersion` int(11) NOT NULL,
@@ -159,8 +159,8 @@ CREATE TABLE `levels` (
   `password` int(11) NOT NULL,
   `original` int(11) NOT NULL,
   `twoPlayer` int(11) NOT NULL DEFAULT '0',
-  `songID` int(11) NOT NULL DEFAULT '0',
-  `objects` int(11) NOT NULL DEFAULT '0',
+  `songID` bihint(255) NOT NULL DEFAULT '0',
+  `objects` bigint(255) NOT NULL DEFAULT '0',
   `coins` int(11) NOT NULL DEFAULT '0',
   `requestedStars` int(11) NOT NULL DEFAULT '0',
   `extraString` mediumtext COLLATE utf8_unicode_ci NOT NULL,
@@ -168,8 +168,8 @@ CREATE TABLE `levels` (
   `levelInfo` mediumtext COLLATE utf8_unicode_ci NOT NULL,
   `secret` mediumtext COLLATE utf8_unicode_ci NOT NULL,
   `starDifficulty` int(11) NOT NULL DEFAULT '0' COMMENT '0=N/A 10=EASY 20=NORMAL 30=HARD 40=HARDER 50=INSANE 50=AUTO 50=DEMON',
-  `downloads` int(11) NOT NULL DEFAULT '0',
-  `likes` int(11) NOT NULL DEFAULT '0',
+  `downloads` bigint(255) NOT NULL DEFAULT '0',
+  `likes` bigint(255) NOT NULL DEFAULT '0',
   `starDemon` int(1) NOT NULL DEFAULT '0',
   `starAuto` varchar(11) COLLATE utf8_unicode_ci NOT NULL DEFAULT '0',
   `starStars` int(11) NOT NULL DEFAULT '0',
@@ -181,7 +181,7 @@ CREATE TABLE `levels` (
   `starHall` int(11) NOT NULL DEFAULT '0',
   `starEpic` int(11) NOT NULL DEFAULT '0',
   `starDemonDiff` int(11) NOT NULL DEFAULT '0',
-  `userID` int(11) NOT NULL,
+  `userID` bigint(255) NOT NULL,
   `extID` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `unlisted` int(11) NOT NULL,
   `originalReup` int(11) NOT NULL DEFAULT '0' COMMENT 'used for levelReupload.php',
@@ -192,51 +192,51 @@ CREATE TABLE `levels` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE `levelscores` (
-  `scoreID` int(11) NOT NULL,
-  `accountID` int(11) NOT NULL,
-  `levelID` int(11) NOT NULL,
+  `scoreID` bigint(255) NOT NULL,
+  `accountID` bigint(255) NOT NULL,
+  `levelID` bigint(255) NOT NULL,
   `percent` int(11) NOT NULL,
   `uploadDate` int(11) NOT NULL,
-  `attempts` int(11) NOT NULL DEFAULT '0',
+  `attempts` bigint(255) NOT NULL DEFAULT '0',
   `coins` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE `links` (
-  `ID` int(11) NOT NULL,
-  `accountID` int(11) NOT NULL,
-  `targetAccountID` int(11) NOT NULL,
+  `ID` bigint(255) NOT NULL,
+  `accountID` bigint(255) NOT NULL,
+  `targetAccountID` bigint(11) NOT NULL,
   `server` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `timestamp` int(11) NOT NULL,
-  `userID` int(11) NOT NULL,
-  `targetUserID` int(11) NOT NULL
+  `userID` bigint(255) NOT NULL,
+  `targetUserID` bigint(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE `mappacks` (
-  `ID` int(11) NOT NULL,
+  `ID` bigint(255) NOT NULL,
   `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `levels` varchar(512) COLLATE utf8_unicode_ci NOT NULL COMMENT 'entered as "ID of level 1, ID of level 2, ID of level 3" for example "13,14,15" (without the "s)',
-  `stars` int(11) NOT NULL,
-  `coins` int(11) NOT NULL,
+  `stars` bigint(255) NOT NULL,
+  `coins` bigint(255) NOT NULL,
   `difficulty` int(11) NOT NULL,
   `rgbcolors` varchar(11) COLLATE utf8_unicode_ci NOT NULL COMMENT 'entered as R,G,B',
   `colors2` varchar(11) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'none'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE `messages` (
-  `userID` int(11) NOT NULL,
+  `userID` bigint(255) NOT NULL,
   `userName` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `body` longtext COLLATE utf8_unicode_ci NOT NULL,
   `subject` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `accID` int(11) NOT NULL,
-  `messageID` int(11) NOT NULL,
-  `toAccountID` int(11) NOT NULL,
+  `accID` bigint(255) NOT NULL,
+  `messageID` bigint(255) NOT NULL,
+  `toAccountID` bigint(255) NOT NULL,
   `timestamp` int(11) NOT NULL,
   `secret` varchar(25) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'unused',
   `isNew` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE `modactions` (
-  `ID` int(11) NOT NULL,
+  `ID` bigint(255) NOT NULL,
   `type` int(11) NOT NULL DEFAULT '0',
   `value` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '0',
   `timestamp` int(11) NOT NULL DEFAULT '0',
@@ -255,24 +255,24 @@ CREATE TABLE `modipperms` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `modips` (
-  `ID` int(11) NOT NULL,
+  `ID` bigint(255) NOT NULL,
   `IP` varchar(69) COLLATE utf8_unicode_ci NOT NULL,
   `isMod` int(11) NOT NULL,
-  `accountID` int(11) NOT NULL,
+  `accountID` bigint(255) NOT NULL,
   `modipCategory` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE `poll` (
-  `accountID` int(11) NOT NULL,
+  `accountID` bigint(255) NOT NULL,
   `pollOption` varchar(255) NOT NULL,
   `optionID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `quests` (
-  `ID` int(11) NOT NULL,
+  `ID` bigint(255) NOT NULL,
   `type` int(11) NOT NULL,
-  `amount` int(11) NOT NULL,
-  `reward` int(11) NOT NULL,
+  `amount` bigint(255) NOT NULL,
+  `reward` bigint(255) NOT NULL,
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -285,19 +285,19 @@ INSERT INTO `quests` (`ID`, `type`, `amount`, `reward`, `name`) VALUES
 (6, 3, 20, 50, 'Q6');
 
 CREATE TABLE `reports` (
-  `ID` int(11) NOT NULL,
-  `levelID` int(11) NOT NULL,
+  `ID` bigint(255) NOT NULL,
+  `levelID` bigint(255) NOT NULL,
   `hostname` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE `roleassign` (
-  `assignID` bigint(20) NOT NULL,
-  `roleID` bigint(20) NOT NULL,
-  `accountID` bigint(20) NOT NULL
+  `assignID` bigint(255) NOT NULL,
+  `roleID` bigint(255) NOT NULL,
+  `accountID` bigint(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `roles` (
-  `roleID` bigint(11) NOT NULL,
+  `roleID` bigint(255) NOT NULL,
   `priority` int(11) NOT NULL DEFAULT '0',
   `roleName` varchar(255) NOT NULL,
   `commandRate` int(11) NOT NULL DEFAULT '0',
