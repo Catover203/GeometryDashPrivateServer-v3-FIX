@@ -349,9 +349,9 @@ INSERT INTO `roles` (`roleID`, `priority`, `roleName`, `commandRate`, `commandFe
 (6, 1, 'Moderator Super', 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, '221,66,245', 1);
 
 CREATE TABLE `songs` (
-  `ID` int(11) NOT NULL,
+  `ID` bigint(11) NOT NULL,
   `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `authorID` int(11) NOT NULL,
+  `authorID` bigint(11) NOT NULL,
   `authorName` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `size` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `download` varchar(1337) COLLATE utf8_unicode_ci NOT NULL,
@@ -362,9 +362,9 @@ CREATE TABLE `songs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE `suggest` (
-  `ID` int(11) NOT NULL,
-  `suggestBy` int(11) NOT NULL DEFAULT '0',
-  `suggestLevelId` int(11) NOT NULL DEFAULT '0',
+  `ID` bigint(255) NOT NULL,
+  `suggestBy` bigint(255) NOT NULL DEFAULT '0',
+  `suggestLevelId` bigint(255) NOT NULL DEFAULT '0',
   `suggestDifficulty` int(11) NOT NULL DEFAULT '0' COMMENT '0 - NA 10 - Easy 20 - Normal 30 - Hard 40 - Harder 50 - Insane/Demon/Auto',
   `suggestStars` int(11) NOT NULL DEFAULT '0',
   `suggestFeatured` int(11) NOT NULL DEFAULT '0',
@@ -375,17 +375,17 @@ CREATE TABLE `suggest` (
 
 CREATE TABLE `users` (
   `isRegistered` int(11) NOT NULL,
-  `userID` int(11) NOT NULL,
-  `extID` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `userID` bigint(255) NOT NULL,
+  `extID` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `userName` varchar(69) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'undefined',
-  `stars` int(11) NOT NULL DEFAULT '0',
-  `demons` int(11) NOT NULL DEFAULT '0',
+  `stars` bigint(255) NOT NULL DEFAULT '0',
+  `demons` bihint(255) NOT NULL DEFAULT '0',
   `icon` int(11) NOT NULL DEFAULT '0',
   `color1` int(11) NOT NULL DEFAULT '0',
   `color2` int(11) NOT NULL DEFAULT '3',
   `iconType` int(11) NOT NULL DEFAULT '0',
-  `coins` int(11) NOT NULL DEFAULT '0',
-  `userCoins` int(11) NOT NULL DEFAULT '0',
+  `coins` bigint(25) NOT NULL DEFAULT '0',
+  `userCoins` bigint(255) NOT NULL DEFAULT '0',
   `special` int(11) NOT NULL DEFAULT '0',
   `gameVersion` int(11) NOT NULL DEFAULT '0',
   `secret` varchar(69) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'none',
@@ -399,8 +399,8 @@ CREATE TABLE `users` (
   `creatorPoints` double NOT NULL DEFAULT '0',
   `IP` varchar(69) COLLATE utf8_unicode_ci NOT NULL DEFAULT '127.0.0.1',
   `lastPlayed` int(11) NOT NULL DEFAULT '0',
-  `diamonds` int(11) NOT NULL DEFAULT '0',
-  `orbs` int(11) NOT NULL DEFAULT '0',
+  `diamonds` bigint(255) NOT NULL DEFAULT '0',
+  `orbs` bigint(255) NOT NULL DEFAULT '0',
   `completedLvls` int(11) NOT NULL DEFAULT '0',
   `accSpider` int(11) NOT NULL DEFAULT '0',
   `accExplosion` int(11) NOT NULL DEFAULT '0',
