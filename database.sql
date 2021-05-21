@@ -1,5 +1,3 @@
--- Catover203CODE = DECODE{TYPE=COCD;Un-php-to=COCD_then=reset_;*SSL|SECURITE_SYSTEM_LAYER=ON|*=>securite_and_cant_hack}('JHhbgHHVFRfxGCFgcd325e5FVHYUgtfgvHYTYTTFV')[powering='not-show-to-all']
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
