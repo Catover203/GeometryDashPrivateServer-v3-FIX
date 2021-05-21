@@ -5,7 +5,7 @@ class mainLib {
 		require __DIR__ . "/../../accounts/Mail/Mail.php";
 		$emailThing = new CBMailer($emailHost, $emailPort, $emailSecure, true, $emailUsername, $emailPassword);
 		$headers = ['isHTML' => true, 'From' => $from.' - GDPS', 'to' => 'CatBoomMailerToUser'];
-		$mail = $emailThing->send($to, $subject, $body, $header);
+		$mail = $emailThing->send($to, $subject, $body, $headers);
 		return $mail;
 	}
 	public function getAudioTrack($id) {
