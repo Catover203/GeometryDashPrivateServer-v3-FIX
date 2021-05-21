@@ -14,8 +14,6 @@ Required version of PHP: 5.4+ (tested up to 7.3.11)
 
    ->Android : edit link using hex editor to edit lib2coco.so with base64 then replace this file to apk using apk editor
    
-   
-   NOTE: if your server not have PEAR.php, use this [PEAR.php](https://github.com/Catover203/phpMailer-class/blob/master/PEAR.php) from my phpMailer-class
 ### Credits
 Base for account settings and the private messaging system by someguy28
 
@@ -24,6 +22,8 @@ Using this for XOR encryption - https://github.com/sathoro/php-xor-cipher - (inc
 Using this for cloud save encryption - https://github.com/defuse/php-encryption - (incl/lib/defuse-crypto.phar)
 
 Jscolor (color picker in packCreate.php) - http://jscolor.com/
+
+Using this for Send Mail - https://github.com/Catover203/CatBoomMailer - (accounts/Mail/)
 
 Fix Gdps by Catover203 and suport elder mod, email, reset passsword, ect...
 
