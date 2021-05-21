@@ -2,18 +2,10 @@
 class mainLib {
 		public function sendMail($from, $to, $subject, $body){
 		include __DIR__ . "/../../config/email.php";
-		require __DIR__ . "/../../accounts/Mail/Mail/Mail.php";
-		$emailThing = new Mail();
-		$headers = array('From' => $emailMail,
-		  'To' => $to,
-		  'Subject' => $subject);
-		$smtp = $emailThing::factory('smtp',
-		  array('host' => $emailHost,
-			'auth' => true,
-			'username' => $emailUsername,
-			'password' => $emailPassword));
-		//Sending email
-		$mail = $smtp->send($to, $headers, $body);
+		require __DIR__ . "/../../accounts/Mail/Mail.php";
+		$emailThing = new CBMailer($emailHost, $emailPort, $emailSecure, true, $emailUsername, $emailPassword);
+		$headers = ['isHTML' => true, 'From' => $from.' - GDPS', 'to' => 'CatBoomMailerToUser'];
+		$mail = $emailThing->send($to, $subject, $body, $header);
 		return $mail;
 	}
 	public function getAudioTrack($id) {
