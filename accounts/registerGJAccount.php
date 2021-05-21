@@ -25,7 +25,7 @@ if(isset($_POST["userName"]) && $_POST["userName"] != "" && isset($_POST["passwo
 		if($emailEnabled){
 			$hash = md5(rand(0, 1000));
 			$baseHash = base64_encode($hash);
-			$Local = $_SERVER[HTTP_HOST].substr($_SERVER['REQUEST_URI'],0,(strlen($_SERVER['REQUEST_URI']) - 31));
+			$Local = $_SERVER['HTTP_HOST'].substr($_SERVER['REQUEST_URI'],0,(strlen($_SERVER['REQUEST_URI']) - 31));
 			$URI = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://".$Local;
 			$body = "Username: ".$username." | Password: ".$password." | Activation link: ".$URI."/dashboard/account/activate.php?h=".$baseHash."&e=".$baseEmail;
 			if(PEAR::isError($gs->sendMail($emailMail, $email, "Account activation", $body))) exit("-1");
