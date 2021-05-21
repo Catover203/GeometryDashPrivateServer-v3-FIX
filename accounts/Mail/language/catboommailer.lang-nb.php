@@ -1,0 +1,20 @@
+<?php
+$CATBOOMMAILER_LANG['authenticate']         = 'SMTP Feil: Kunne ikke autentisere.';
+$CATBOOMMAILER_LANG['connect_host']         = 'SMTP Feil: Kunne ikke koble til SMTP tjener.';
+$CATBOOMMAILER_LANG['data_not_accepted']    = 'SMTP Feil: Datainnhold ikke akseptert.';
+$CATBOOMMAILER_LANG['empty_message']        = 'Meldingsinnhold mangler';
+$CATBOOMMAILER_LANG['encoding']             = 'Ukjent koding: ';
+$CATBOOMMAILER_LANG['execute']              = 'Kunne ikke utføre: ';
+$CATBOOMMAILER_LANG['file_access']          = 'Får ikke tilgang til filen: ';
+$CATBOOMMAILER_LANG['file_open']            = 'Fil Feil: Kunne ikke åpne filen: ';
+$CATBOOMMAILER_LANG['from_failed']          = 'Følgende Frå adresse feilet: ';
+$CATBOOMMAILER_LANG['instantiate']          = 'Kunne ikke initialisere post funksjon.';
+$CATBOOMMAILER_LANG['invalid_address']      = 'Ugyldig adresse: ';
+$CATBOOMMAILER_LANG['mailer_not_supported'] = ' sender er ikke støttet.';
+$CATBOOMMAILER_LANG['provide_address']      = 'Du må opppgi minst en mottakeradresse.';
+$CATBOOMMAILER_LANG['recipients_failed']    = 'SMTP Feil: Følgende mottakeradresse feilet: ';
+$CATBOOMMAILER_LANG['signing']              = 'Signering Feil: ';
+$CATBOOMMAILER_LANG['smtp_connect_failed']  = 'SMTP connect() feilet.';
+$CATBOOMMAILER_LANG['smtp_error']           = 'SMTP server feil: ';
+$CATBOOMMAILER_LANG['variable_set']         = 'Kan ikke skrive eller omskrive variabel: ';
+$CATBOOMMAILER_LANG['extension_missing']    = 'Utvidelse mangler: ';

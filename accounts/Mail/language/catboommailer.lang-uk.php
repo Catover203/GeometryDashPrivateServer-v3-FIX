@@ -1,0 +1,20 @@
+<?php
+$CATBOOMMAILER_LANG['authenticate']         = 'Помилка SMTP: помилка авторизації.';
+$CATBOOMMAILER_LANG['connect_host']         = 'Помилка SMTP: не вдається під\'єднатися до SMTP-серверу.';
+$CATBOOMMAILER_LANG['data_not_accepted']    = 'Помилка SMTP: дані не прийнято.';
+$CATBOOMMAILER_LANG['encoding']             = 'Невідоме кодування: ';
+$CATBOOMMAILER_LANG['execute']              = 'Неможливо виконати команду: ';
+$CATBOOMMAILER_LANG['file_access']          = 'Немає доступу до файлу: ';
+$CATBOOMMAILER_LANG['file_open']            = 'Помилка файлової системи: не вдається відкрити файл: ';
+$CATBOOMMAILER_LANG['from_failed']          = 'Невірна адреса відправника: ';
+$CATBOOMMAILER_LANG['instantiate']          = 'Неможливо запустити функцію mail().';
+$CATBOOMMAILER_LANG['provide_address']      = 'Будь-ласка, введіть хоча б одну email-адресу отримувача.';
+$CATBOOMMAILER_LANG['mailer_not_supported'] = ' - поштовий сервер не підтримується.';
+$CATBOOMMAILER_LANG['recipients_failed']    = 'Помилка SMTP: не вдалося відправлення для таких отримувачів: ';
+$CATBOOMMAILER_LANG['empty_message']        = 'Пусте повідомлення';
+$CATBOOMMAILER_LANG['invalid_address']      = 'Не відправлено через невірний формат email-адреси: ';
+$CATBOOMMAILER_LANG['signing']              = 'Помилка підпису: ';
+$CATBOOMMAILER_LANG['smtp_connect_failed']  = 'Помилка з\'єднання з SMTP-сервером';
+$CATBOOMMAILER_LANG['smtp_error']           = 'Помилка SMTP-сервера: ';
+$CATBOOMMAILER_LANG['variable_set']         = 'Неможливо встановити або скинути змінну: ';
+$CATBOOMMAILER_LANG['extension_missing']    = 'Розширення відсутнє: ';

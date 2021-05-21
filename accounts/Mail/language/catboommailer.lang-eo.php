@@ -1,0 +1,20 @@
+<?php
+$CATBOOMMAILER_LANG['authenticate']         = 'Eraro de servilo SMTP : aŭtentigo malsukcesis.';
+$CATBOOMMAILER_LANG['connect_host']         = 'Eraro de servilo SMTP : konektado al servilo malsukcesis.';
+$CATBOOMMAILER_LANG['data_not_accepted']    = 'Eraro de servilo SMTP : neĝustaj datumoj.';
+$CATBOOMMAILER_LANG['empty_message']        = 'Teksto de mesaĝo mankas.';
+$CATBOOMMAILER_LANG['encoding']             = 'Nekonata kodoprezento: ';
+$CATBOOMMAILER_LANG['execute']              = 'Lanĉi rulumadon ne eblis: ';
+$CATBOOMMAILER_LANG['file_access']          = 'Aliro al dosiero ne sukcesis: ';
+$CATBOOMMAILER_LANG['file_open']            = 'Eraro de dosiero: malfermo neeblas: ';
+$CATBOOMMAILER_LANG['from_failed']          = 'Jena adreso de sendinto malsukcesis: ';
+$CATBOOMMAILER_LANG['instantiate']          = 'Genero de retmesaĝa funkcio neeblis.';
+$CATBOOMMAILER_LANG['invalid_address']      = 'Retadreso ne validas: ';
+$CATBOOMMAILER_LANG['mailer_not_supported'] = ' mesaĝilo ne subtenata.';
+$CATBOOMMAILER_LANG['provide_address']      = 'Vi devas tajpi almenaŭ unu recevontan retadreson.';
+$CATBOOMMAILER_LANG['recipients_failed']    = 'Eraro de servilo SMTP : la jenaj poŝtrecivuloj kaŭzis eraron: ';
+$CATBOOMMAILER_LANG['signing']              = 'Eraro de subskribo: ';
+$CATBOOMMAILER_LANG['smtp_connect_failed']  = 'SMTP konektado malsukcesis.';
+$CATBOOMMAILER_LANG['smtp_error']           = 'Eraro de servilo SMTP : ';
+$CATBOOMMAILER_LANG['variable_set']         = 'Variablo ne pravalorizeblas aŭ ne repravalorizeblas: ';
+$CATBOOMMAILER_LANG['extension_missing']    = 'Mankas etendo: ';

@@ -1,0 +1,20 @@
+<?php
+$CATBOOMMAILER_LANG['authenticate']         = 'SMTP Greška: Neuspjela prijava.';
+$CATBOOMMAILER_LANG['connect_host']         = 'SMTP Greška: Nije moguće spojiti se sa SMTP serverom.';
+$CATBOOMMAILER_LANG['data_not_accepted']    = 'SMTP Greška: Podatci nisu prihvaćeni.';
+$CATBOOMMAILER_LANG['empty_message']        = 'Sadržaj poruke je prazan.';
+$CATBOOMMAILER_LANG['encoding']             = 'Nepoznata kriptografija: ';
+$CATBOOMMAILER_LANG['execute']              = 'Nije moguće izvršiti naredbu: ';
+$CATBOOMMAILER_LANG['file_access']          = 'Nije moguće pristupiti datoteci: ';
+$CATBOOMMAILER_LANG['file_open']            = 'Nije moguće otvoriti datoteku: ';
+$CATBOOMMAILER_LANG['from_failed']          = 'SMTP Greška: Slanje sa navedenih e-mail adresa nije uspjelo: ';
+$CATBOOMMAILER_LANG['recipients_failed']    = 'SMTP Greška: Slanje na navedene e-mail adrese nije uspjelo: ';
+$CATBOOMMAILER_LANG['instantiate']          = 'Ne mogu pokrenuti mail funkcionalnost.';
+$CATBOOMMAILER_LANG['invalid_address']      = 'E-mail nije poslan. Neispravna e-mail adresa: ';
+$CATBOOMMAILER_LANG['mailer_not_supported'] = ' mailer nije podržan.';
+$CATBOOMMAILER_LANG['provide_address']      = 'Definišite barem jednu adresu primaoca.';
+$CATBOOMMAILER_LANG['signing']              = 'Greška prilikom prijave: ';
+$CATBOOMMAILER_LANG['smtp_connect_failed']  = 'Spajanje na SMTP server nije uspjelo.';
+$CATBOOMMAILER_LANG['smtp_error']           = 'SMTP greška: ';
+$CATBOOMMAILER_LANG['variable_set']         = 'Nije moguće postaviti varijablu ili je vratiti nazad: ';
+$CATBOOMMAILER_LANG['extension_missing']    = 'Nedostaje ekstenzija: ';

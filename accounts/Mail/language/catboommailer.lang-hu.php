@@ -1,0 +1,20 @@
+<?php
+$CATBOOMMAILER_LANG['authenticate']         = 'SMTP hiba: az azonosítás sikertelen.';
+$CATBOOMMAILER_LANG['connect_host']         = 'SMTP hiba: nem lehet kapcsolódni az SMTP-szerverhez.';
+$CATBOOMMAILER_LANG['data_not_accepted']    = 'SMTP hiba: adatok visszautasítva.';
+$CATBOOMMAILER_LANG['empty_message']        = 'Üres az üzenettörzs.';
+$CATBOOMMAILER_LANG['encoding']             = 'Ismeretlen kódolás: ';
+$CATBOOMMAILER_LANG['execute']              = 'Nem lehet végrehajtani: ';
+$CATBOOMMAILER_LANG['file_access']          = 'A következő fájl nem elérhető: ';
+$CATBOOMMAILER_LANG['file_open']            = 'Fájl hiba: a következő fájlt nem lehet megnyitni: ';
+$CATBOOMMAILER_LANG['from_failed']          = 'A feladóként megadott következő cím hibás: ';
+$CATBOOMMAILER_LANG['instantiate']          = 'A PHP mail() függvényt nem sikerült végrehajtani.';
+$CATBOOMMAILER_LANG['invalid_address']      = 'Érvénytelen cím: ';
+$CATBOOMMAILER_LANG['mailer_not_supported'] = ' a mailer-osztály nem támogatott.';
+$CATBOOMMAILER_LANG['provide_address']      = 'Legalább egy címzettet fel kell tüntetni.';
+$CATBOOMMAILER_LANG['recipients_failed']    = 'SMTP hiba: a címzettként megadott következő címek hibásak: ';
+$CATBOOMMAILER_LANG['signing']              = 'Hibás aláírás: ';
+$CATBOOMMAILER_LANG['smtp_connect_failed']  = 'Hiba az SMTP-kapcsolatban.';
+$CATBOOMMAILER_LANG['smtp_error']           = 'SMTP-szerver hiba: ';
+$CATBOOMMAILER_LANG['variable_set']         = 'A következő változók beállítása nem sikerült: ';
+$CATBOOMMAILER_LANG['extension_missing']    = 'Bővítmény hiányzik: ';

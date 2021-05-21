@@ -1,0 +1,20 @@
+<?php
+$CATBOOMMAILER_LANG['authenticate']         = 'SMTP Σφάλμα: Αδυναμία πιστοποίησης (authentication).';
+$CATBOOMMAILER_LANG['connect_host']         = 'SMTP Σφάλμα: Αδυναμία σύνδεσης στον SMTP-Host.';
+$CATBOOMMAILER_LANG['data_not_accepted']    = 'SMTP Σφάλμα: Τα δεδομένα δεν έγιναν αποδεκτά.';
+$CATBOOMMAILER_LANG['empty_message']        = 'Το E-Mail δεν έχει περιεχόμενο .';
+$CATBOOMMAILER_LANG['encoding']             = 'Αγνωστο Encoding-Format: ';
+$CATBOOMMAILER_LANG['execute']              = 'Αδυναμία εκτέλεσης ακόλουθης εντολής: ';
+$CATBOOMMAILER_LANG['file_access']          = 'Αδυναμία προσπέλασης του αρχείου: ';
+$CATBOOMMAILER_LANG['file_open']            = 'Σφάλμα Αρχείου: Δεν είναι δυνατό το άνοιγμα του ακόλουθου αρχείου: ';
+$CATBOOMMAILER_LANG['from_failed']          = 'Η παρακάτω διεύθυνση αποστολέα δεν είναι σωστή: ';
+$CATBOOMMAILER_LANG['instantiate']          = 'Αδυναμία εκκίνησης Mail function.';
+$CATBOOMMAILER_LANG['invalid_address']      = 'Το μήνυμα δεν εστάλη, η διεύθυνση δεν είναι έγκυρη: ';
+$CATBOOMMAILER_LANG['mailer_not_supported'] = ' mailer δεν υποστηρίζεται.';
+$CATBOOMMAILER_LANG['provide_address']      = 'Παρακαλούμε δώστε τουλάχιστον μια e-mail διεύθυνση παραλήπτη.';
+$CATBOOMMAILER_LANG['recipients_failed']    = 'SMTP Σφάλμα: Οι παρακάτω διευθύνσεις παραλήπτη δεν είναι έγκυρες: ';
+$CATBOOMMAILER_LANG['signing']              = 'Σφάλμα υπογραφής: ';
+$CATBOOMMAILER_LANG['smtp_connect_failed']  = 'Αποτυχία σύνδεσης στον SMTP Server.';
+$CATBOOMMAILER_LANG['smtp_error']           = 'Σφάλμα από τον SMTP Server: ';
+$CATBOOMMAILER_LANG['variable_set']         = 'Αδυναμία ορισμού ή αρχικοποίησης μεταβλητής: ';
+//$CATBOOMMAILER_LANG['extension_missing']    = 'Extension missing: ';

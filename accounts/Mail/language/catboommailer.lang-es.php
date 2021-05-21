@@ -1,0 +1,20 @@
+<?php
+$CATBOOMMAILER_LANG['authenticate']         = 'Error SMTP: Imposible autentificar.';
+$CATBOOMMAILER_LANG['connect_host']         = 'Error SMTP: Imposible conectar al servidor SMTP.';
+$CATBOOMMAILER_LANG['data_not_accepted']    = 'Error SMTP: Datos no aceptados.';
+$CATBOOMMAILER_LANG['empty_message']        = 'El cuerpo del mensaje está vacío.';
+$CATBOOMMAILER_LANG['encoding']             = 'Codificación desconocida: ';
+$CATBOOMMAILER_LANG['execute']              = 'Imposible ejecutar: ';
+$CATBOOMMAILER_LANG['file_access']          = 'Imposible acceder al archivo: ';
+$CATBOOMMAILER_LANG['file_open']            = 'Error de Archivo: Imposible abrir el archivo: ';
+$CATBOOMMAILER_LANG['from_failed']          = 'La(s) siguiente(s) direcciones de remitente fallaron: ';
+$CATBOOMMAILER_LANG['instantiate']          = 'Imposible crear una instancia de la función Mail.';
+$CATBOOMMAILER_LANG['invalid_address']      = 'Imposible enviar: dirección de email inválido: ';
+$CATBOOMMAILER_LANG['mailer_not_supported'] = ' mailer no está soportado.';
+$CATBOOMMAILER_LANG['provide_address']      = 'Debe proporcionar al menos una dirección de email de destino.';
+$CATBOOMMAILER_LANG['recipients_failed']    = 'Error SMTP: Los siguientes destinos fallaron: ';
+$CATBOOMMAILER_LANG['signing']              = 'Error al firmar: ';
+$CATBOOMMAILER_LANG['smtp_connect_failed']  = 'SMTP Connect() falló.';
+$CATBOOMMAILER_LANG['smtp_error']           = 'Error del servidor SMTP: ';
+$CATBOOMMAILER_LANG['variable_set']         = 'No se pudo configurar la variable: ';
+$CATBOOMMAILER_LANG['extension_missing']    = 'Extensión faltante: ';

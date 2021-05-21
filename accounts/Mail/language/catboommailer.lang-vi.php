@@ -1,0 +1,20 @@
+<?php
+$CATBOOMMAILER_LANG['authenticate']         = 'Lỗi SMTP: Không thể xác thực.';
+$CATBOOMMAILER_LANG['connect_host']         = 'Lỗi SMTP: Không thể kết nối máy chủ SMTP.';
+$CATBOOMMAILER_LANG['data_not_accepted']    = 'Lỗi SMTP: Dữ liệu không được chấp nhận.';
+$CATBOOMMAILER_LANG['empty_message']        = 'Không có nội dung';
+$CATBOOMMAILER_LANG['encoding']             = 'Mã hóa không xác định: ';
+$CATBOOMMAILER_LANG['execute']              = 'Không thực hiện được: ';
+$CATBOOMMAILER_LANG['file_access']          = 'Không thể truy cập tệp tin ';
+$CATBOOMMAILER_LANG['file_open']            = 'Lỗi Tập tin: Không thể mở tệp tin: ';
+$CATBOOMMAILER_LANG['from_failed']          = 'Lỗi địa chỉ gửi đi: ';
+$CATBOOMMAILER_LANG['instantiate']          = 'Không dùng được các hàm gửi thư.';
+$CATBOOMMAILER_LANG['invalid_address']      = 'Đại chỉ emai không đúng: ';
+$CATBOOMMAILER_LANG['mailer_not_supported'] = ' trình gửi thư không được hỗ trợ.';
+$CATBOOMMAILER_LANG['provide_address']      = 'Bạn phải cung cấp ít nhất một địa chỉ người nhận.';
+$CATBOOMMAILER_LANG['recipients_failed']    = 'Lỗi SMTP: lỗi địa chỉ người nhận: ';
+$CATBOOMMAILER_LANG['signing']              = 'Lỗi đăng nhập: ';
+$CATBOOMMAILER_LANG['smtp_connect_failed']  = 'Lỗi kết nối với SMTP';
+$CATBOOMMAILER_LANG['smtp_error']           = 'Lỗi máy chủ smtp ';
+$CATBOOMMAILER_LANG['variable_set']         = 'Không thể thiết lập hoặc thiết lập lại biến: ';
+$CATBOOMMAILER_LANG['extension_missing']    = 'Tiện ích mở rộng bị thiếu: ';

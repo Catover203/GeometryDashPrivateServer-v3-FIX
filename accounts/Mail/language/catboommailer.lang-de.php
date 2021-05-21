@@ -1,0 +1,22 @@
+<?php
+$CATBOOMMAILER_LANG['authenticate']         = 'SMTP-Fehler: Authentifizierung fehlgeschlagen.';
+$CATBOOMMAILER_LANG['connect_host']         = 'SMTP-Fehler: Konnte keine Verbindung zum SMTP-Host herstellen.';
+$CATBOOMMAILER_LANG['data_not_accepted']    = 'SMTP-Fehler: Daten werden nicht akzeptiert.';
+$CATBOOMMAILER_LANG['empty_message']        = 'E-Mail-Inhalt ist leer.';
+$CATBOOMMAILER_LANG['encoding']             = 'Unbekannte Kodierung: ';
+$CATBOOMMAILER_LANG['execute']              = 'Konnte folgenden Befehl nicht ausführen: ';
+$CATBOOMMAILER_LANG['file_access']          = 'Zugriff auf folgende Datei fehlgeschlagen: ';
+$CATBOOMMAILER_LANG['file_open']            = 'Dateifehler: Konnte folgende Datei nicht öffnen: ';
+$CATBOOMMAILER_LANG['from_failed']          = 'Die folgende Absenderadresse ist nicht korrekt: ';
+$CATBOOMMAILER_LANG['instantiate']          = 'Mail-Funktion konnte nicht initialisiert werden.';
+$CATBOOMMAILER_LANG['invalid_address']      = 'Die Adresse ist ungültig: ';
+$CATBOOMMAILER_LANG['invalid_hostentry']    = 'Ungültiger Hosteintrag: ';
+$CATBOOMMAILER_LANG['invalid_host']         = 'Ungültiger Host: ';
+$CATBOOMMAILER_LANG['mailer_not_supported'] = ' mailer wird nicht unterstützt.';
+$CATBOOMMAILER_LANG['provide_address']      = 'Bitte geben Sie mindestens eine Empfängeradresse an.';
+$CATBOOMMAILER_LANG['recipients_failed']    = 'SMTP-Fehler: Die folgenden Empfänger sind nicht korrekt: ';
+$CATBOOMMAILER_LANG['signing']              = 'Fehler beim Signieren: ';
+$CATBOOMMAILER_LANG['smtp_connect_failed']  = 'Verbindung zum SMTP-Server fehlgeschlagen.';
+$CATBOOMMAILER_LANG['smtp_error']           = 'Fehler vom SMTP-Server: ';
+$CATBOOMMAILER_LANG['variable_set']         = 'Kann Variable nicht setzen oder zurücksetzen: ';
+$CATBOOMMAILER_LANG['extension_missing']    = 'Fehlende Erweiterung: ';

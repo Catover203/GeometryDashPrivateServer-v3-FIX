@@ -1,0 +1,20 @@
+<?php
+$CATBOOMMAILER_LANG['authenticate']         = 'SMTP Hatası: Oturum açılamadı.';
+$CATBOOMMAILER_LANG['connect_host']         = 'SMTP Hatası: SMTP sunucusuna bağlanılamadı.';
+$CATBOOMMAILER_LANG['data_not_accepted']    = 'SMTP Hatası: Veri kabul edilmedi.';
+$CATBOOMMAILER_LANG['empty_message']        = 'Mesajın içeriği boş';
+$CATBOOMMAILER_LANG['encoding']             = 'Bilinmeyen karakter kodlama: ';
+$CATBOOMMAILER_LANG['execute']              = 'Çalıştırılamadı: ';
+$CATBOOMMAILER_LANG['file_access']          = 'Dosyaya erişilemedi: ';
+$CATBOOMMAILER_LANG['file_open']            = 'Dosya Hatası: Dosya açılamadı: ';
+$CATBOOMMAILER_LANG['from_failed']          = 'Belirtilen adreslere gönderme başarısız: ';
+$CATBOOMMAILER_LANG['instantiate']          = 'Örnek e-posta fonksiyonu oluşturulamadı.';
+$CATBOOMMAILER_LANG['invalid_address']      = 'Geçersiz e-posta adresi: ';
+$CATBOOMMAILER_LANG['mailer_not_supported'] = ' e-posta kütüphanesi desteklenmiyor.';
+$CATBOOMMAILER_LANG['provide_address']      = 'En az bir alıcı e-posta adresi belirtmelisiniz.';
+$CATBOOMMAILER_LANG['recipients_failed']    = 'SMTP Hatası: Belirtilen alıcılara ulaşılamadı: ';
+$CATBOOMMAILER_LANG['signing']              = 'İmzalama hatası: ';
+$CATBOOMMAILER_LANG['smtp_connect_failed']  = 'SMTP connect() fonksiyonu başarısız.';
+$CATBOOMMAILER_LANG['smtp_error']           = 'SMTP sunucu hatası: ';
+$CATBOOMMAILER_LANG['variable_set']         = 'Değişken ayarlanamadı ya da sıfırlanamadı: ';
+$CATBOOMMAILER_LANG['extension_missing']    = 'Eklenti bulunamadı: ';

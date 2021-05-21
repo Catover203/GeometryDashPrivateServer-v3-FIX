@@ -1,0 +1,22 @@
+<?php
+$CATBOOMMAILER_LANG['authenticate']         = 'Chyba SMTP: Autentizace selhala.';
+$CATBOOMMAILER_LANG['connect_host']         = 'Chyba SMTP: Nelze navázat spojení se SMTP serverem.';
+$CATBOOMMAILER_LANG['data_not_accepted']    = 'Chyba SMTP: Data nebyla přijata.';
+$CATBOOMMAILER_LANG['empty_message']        = 'Prázdné tělo zprávy';
+$CATBOOMMAILER_LANG['encoding']             = 'Neznámé kódování: ';
+$CATBOOMMAILER_LANG['execute']              = 'Nelze provést: ';
+$CATBOOMMAILER_LANG['file_access']          = 'Nelze získat přístup k souboru: ';
+$CATBOOMMAILER_LANG['file_open']            = 'Chyba souboru: Nelze otevřít soubor pro čtení: ';
+$CATBOOMMAILER_LANG['from_failed']          = 'Následující adresa odesílatele je nesprávná: ';
+$CATBOOMMAILER_LANG['instantiate']          = 'Nelze vytvořit instanci emailové funkce.';
+$CATBOOMMAILER_LANG['invalid_address']      = 'Neplatná adresa: ';
+$CATBOOMMAILER_LANG['invalid_hostentry']    = 'Záznam hostitele je nesprávný: ';
+$CATBOOMMAILER_LANG['invalid_host']         = 'Hostitel je nesprávný: ';
+$CATBOOMMAILER_LANG['mailer_not_supported'] = ' mailer není podporován.';
+$CATBOOMMAILER_LANG['provide_address']      = 'Musíte zadat alespoň jednu emailovou adresu příjemce.';
+$CATBOOMMAILER_LANG['recipients_failed']    = 'Chyba SMTP: Následující adresy příjemců nejsou správně: ';
+$CATBOOMMAILER_LANG['signing']              = 'Chyba přihlašování: ';
+$CATBOOMMAILER_LANG['smtp_connect_failed']  = 'SMTP Connect() selhal.';
+$CATBOOMMAILER_LANG['smtp_error']           = 'Chyba SMTP serveru: ';
+$CATBOOMMAILER_LANG['variable_set']         = 'Nelze nastavit nebo změnit proměnnou: ';
+$CATBOOMMAILER_LANG['extension_missing']    = 'Chybí rozšíření: ';

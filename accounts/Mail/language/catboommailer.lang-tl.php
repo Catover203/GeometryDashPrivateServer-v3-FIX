@@ -1,0 +1,20 @@
+<?php
+$CATBOOMMAILER_LANG['authenticate']         = 'SMTP Error: Hindi mapatotohanan.';
+$CATBOOMMAILER_LANG['connect_host']         = 'SMTP Error: Hindi makakonekta sa SMTP host.';
+$CATBOOMMAILER_LANG['data_not_accepted']    = 'SMTP Error: Ang datos ay hindi naitanggap.';
+$CATBOOMMAILER_LANG['empty_message']        = 'Walang laman ang mensahe';
+$CATBOOMMAILER_LANG['encoding']             = 'Hindi alam ang encoding: ';
+$CATBOOMMAILER_LANG['execute']              = 'Hindi maisasagawa: ';
+$CATBOOMMAILER_LANG['file_access']          = 'Hindi ma-access ang file: ';
+$CATBOOMMAILER_LANG['file_open']            = 'File Error: Hindi mabuksan ang file: ';
+$CATBOOMMAILER_LANG['from_failed']          = 'Ang sumusunod na address ay nabigo: ';
+$CATBOOMMAILER_LANG['instantiate']          = 'Hindi maisimulan ang instance ng mail function.';
+$CATBOOMMAILER_LANG['invalid_address']      = 'Hindi wasto ang address na naibigay: ';
+$CATBOOMMAILER_LANG['mailer_not_supported'] = 'Ang mailer ay hindi suportado.';
+$CATBOOMMAILER_LANG['provide_address']      = 'Kailangan mong magbigay ng kahit isang email address na tatanggap.';
+$CATBOOMMAILER_LANG['recipients_failed']    = 'SMTP Error: Ang mga sumusunod na tatanggap ay nabigo: ';
+$CATBOOMMAILER_LANG['signing']              = 'Hindi ma-sign: ';
+$CATBOOMMAILER_LANG['smtp_connect_failed']  = 'Ang SMTP connect() ay nabigo.';
+$CATBOOMMAILER_LANG['smtp_error']           = 'Ang server ng SMTP ay nabigo: ';
+$CATBOOMMAILER_LANG['variable_set']         = 'Hindi matatakda o ma-reset ang mga variables: ';
+$CATBOOMMAILER_LANG['extension_missing']    = 'Nawawala ang extension: ';

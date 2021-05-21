@@ -1,0 +1,20 @@
+<?php
+$CATBOOMMAILER_LANG['authenticate']         = 'SMTP შეცდომა: ავტორიზაცია შეუძლებელია.';
+$CATBOOMMAILER_LANG['connect_host']         = 'SMTP შეცდომა: SMTP სერვერთან დაკავშირება შეუძლებელია.';
+$CATBOOMMAILER_LANG['data_not_accepted']    = 'SMTP შეცდომა: მონაცემები არ იქნა მიღებული.';
+$CATBOOMMAILER_LANG['encoding']             = 'კოდირების უცნობი ტიპი: ';
+$CATBOOMMAILER_LANG['execute']              = 'შეუძლებელია შემდეგი ბრძანების შესრულება: ';
+$CATBOOMMAILER_LANG['file_access']          = 'შეუძლებელია წვდომა ფაილთან: ';
+$CATBOOMMAILER_LANG['file_open']            = 'ფაილური სისტემის შეცდომა: არ იხსნება ფაილი: ';
+$CATBOOMMAILER_LANG['from_failed']          = 'გამგზავნის არასწორი მისამართი: ';
+$CATBOOMMAILER_LANG['instantiate']          = 'mail ფუნქციის გაშვება ვერ ხერხდება.';
+$CATBOOMMAILER_LANG['provide_address']      = 'გთხოვთ მიუთითოთ ერთი ადრესატის e-mail მისამართი მაინც.';
+$CATBOOMMAILER_LANG['mailer_not_supported'] = ' - საფოსტო სერვერის მხარდაჭერა არ არის.';
+$CATBOOMMAILER_LANG['recipients_failed']    = 'SMTP შეცდომა: შემდეგ მისამართებზე გაგზავნა ვერ მოხერხდა: ';
+$CATBOOMMAILER_LANG['empty_message']        = 'შეტყობინება ცარიელია';
+$CATBOOMMAILER_LANG['invalid_address']      = 'არ გაიგზავნა, e-mail მისამართის არასწორი ფორმატი: ';
+$CATBOOMMAILER_LANG['signing']              = 'ხელმოწერის შეცდომა: ';
+$CATBOOMMAILER_LANG['smtp_connect_failed']  = 'შეცდომა SMTP სერვერთან დაკავშირებისას';
+$CATBOOMMAILER_LANG['smtp_error']           = 'SMTP სერვერის შეცდომა: ';
+$CATBOOMMAILER_LANG['variable_set']         = 'შეუძლებელია შემდეგი ცვლადის შექმნა ან შეცვლა: ';
+$CATBOOMMAILER_LANG['extension_missing']    = 'ბიბლიოთეკა არ არსებობს: ';

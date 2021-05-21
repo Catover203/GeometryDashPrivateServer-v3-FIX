@@ -1,0 +1,20 @@
+<?php
+$CATBOOMMAILER_LANG['authenticate']         = 'SMTP kļūda: Autorizācija neizdevās.';
+$CATBOOMMAILER_LANG['connect_host']         = 'SMTP Kļūda: Nevar izveidot savienojumu ar SMTP serveri.';
+$CATBOOMMAILER_LANG['data_not_accepted']    = 'SMTP Kļūda: Nepieņem informāciju.';
+$CATBOOMMAILER_LANG['empty_message']        = 'Ziņojuma teksts ir tukšs';
+$CATBOOMMAILER_LANG['encoding']             = 'Neatpazīts kodējums: ';
+$CATBOOMMAILER_LANG['execute']              = 'Neizdevās izpildīt komandu: ';
+$CATBOOMMAILER_LANG['file_access']          = 'Fails nav pieejams: ';
+$CATBOOMMAILER_LANG['file_open']            = 'Faila kļūda: Nevar atvērt failu: ';
+$CATBOOMMAILER_LANG['from_failed']          = 'Nepareiza sūtītāja adrese: ';
+$CATBOOMMAILER_LANG['instantiate']          = 'Nevar palaist sūtīšanas funkciju.';
+$CATBOOMMAILER_LANG['invalid_address']      = 'Nepareiza adrese: ';
+$CATBOOMMAILER_LANG['mailer_not_supported'] = ' sūtītājs netiek atbalstīts.';
+$CATBOOMMAILER_LANG['provide_address']      = 'Lūdzu, norādiet vismaz vienu adresātu.';
+$CATBOOMMAILER_LANG['recipients_failed']    = 'SMTP kļūda: neizdevās nosūtīt šādiem saņēmējiem: ';
+$CATBOOMMAILER_LANG['signing']              = 'Autorizācijas kļūda: ';
+$CATBOOMMAILER_LANG['smtp_connect_failed']  = 'SMTP savienojuma kļūda';
+$CATBOOMMAILER_LANG['smtp_error']           = 'SMTP servera kļūda: ';
+$CATBOOMMAILER_LANG['variable_set']         = 'Nevar piešķirt mainīgā vērtību: ';
+//$CATBOOMMAILER_LANG['extension_missing']    = 'Extension missing: ';

@@ -1,0 +1,20 @@
+<?php
+$CATBOOMMAILER_LANG['authenticate']         = 'SMTP Viga: Autoriseerimise viga.';
+$CATBOOMMAILER_LANG['connect_host']         = 'SMTP Viga: Ei õnnestunud luua ühendust SMTP serveriga.';
+$CATBOOMMAILER_LANG['data_not_accepted']    = 'SMTP Viga: Vigased andmed.';
+$CATBOOMMAILER_LANG['empty_message']        = 'Tühi kirja sisu';
+$CATBOOMMAILER_LANG["encoding"]             = 'Tundmatu kodeering: ';
+$CATBOOMMAILER_LANG['execute']              = 'Tegevus ebaõnnestus: ';
+$CATBOOMMAILER_LANG['file_access']          = 'Pole piisavalt õiguseid järgneva faili avamiseks: ';
+$CATBOOMMAILER_LANG['file_open']            = 'Faili Viga: Faili avamine ebaõnnestus: ';
+$CATBOOMMAILER_LANG['from_failed']          = 'Järgnev saatja e-posti aadress on vigane: ';
+$CATBOOMMAILER_LANG['instantiate']          = 'mail funktiooni käivitamine ebaõnnestus.';
+$CATBOOMMAILER_LANG['invalid_address']      = 'Saatmine peatatud, e-posti address vigane: ';
+$CATBOOMMAILER_LANG['provide_address']      = 'Te peate määrama vähemalt ühe saaja e-posti aadressi.';
+$CATBOOMMAILER_LANG['mailer_not_supported'] = ' maileri tugi puudub.';
+$CATBOOMMAILER_LANG['recipients_failed']    = 'SMTP Viga: Järgnevate saajate e-posti aadressid on vigased: ';
+$CATBOOMMAILER_LANG["signing"]              = 'Viga allkirjastamisel: ';
+$CATBOOMMAILER_LANG['smtp_connect_failed']  = 'SMTP Connect() ebaõnnestus.';
+$CATBOOMMAILER_LANG['smtp_error']           = 'SMTP serveri viga: ';
+$CATBOOMMAILER_LANG['variable_set']         = 'Ei õnnestunud määrata või lähtestada muutujat: ';
+$CATBOOMMAILER_LANG['extension_missing']    = 'Nõutud laiendus on puudu: ';

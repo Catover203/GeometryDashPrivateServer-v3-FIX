@@ -1,0 +1,20 @@
+<?php
+$CATBOOMMAILER_LANG['authenticate']         = 'SMTP त्रुटि: प्रामाणिकता की जांच नहीं हो सका। ';
+$CATBOOMMAILER_LANG['connect_host']         = 'SMTP त्रुटि: SMTP सर्वर से कनेक्ट नहीं हो सका। ';
+$CATBOOMMAILER_LANG['data_not_accepted']    = 'SMTP त्रुटि: डेटा स्वीकार नहीं किया जाता है। ';
+$CATBOOMMAILER_LANG['empty_message']        = 'संदेश खाली है। ';
+$CATBOOMMAILER_LANG['encoding']             = 'अज्ञात एन्कोडिंग प्रकार। ';
+$CATBOOMMAILER_LANG['execute']              = 'आदेश को निष्पादित करने में विफल। ';
+$CATBOOMMAILER_LANG['file_access']          = 'फ़ाइल उपलब्ध नहीं है। ';
+$CATBOOMMAILER_LANG['file_open']            = 'फ़ाइल त्रुटि: फाइल को खोला नहीं जा सका। ';
+$CATBOOMMAILER_LANG['from_failed']          = 'प्रेषक का पता गलत है। ';
+$CATBOOMMAILER_LANG['instantiate']          = 'मेल फ़ंक्शन कॉल नहीं कर सकता है।';
+$CATBOOMMAILER_LANG['invalid_address']      = 'पता गलत है। ';
+$CATBOOMMAILER_LANG['mailer_not_supported'] = 'मेल सर्वर के साथ काम नहीं करता है। ';
+$CATBOOMMAILER_LANG['provide_address']      = 'आपको कम से कम एक प्राप्तकर्ता का ई-मेल पता प्रदान करना होगा।';
+$CATBOOMMAILER_LANG['recipients_failed']    = 'SMTP त्रुटि: निम्न प्राप्तकर्ताओं को पते भेजने में विफल। ';
+$CATBOOMMAILER_LANG['signing']              = 'साइनअप त्रुटि:। ';
+$CATBOOMMAILER_LANG['smtp_connect_failed']  = 'SMTP का connect () फ़ंक्शन विफल हुआ। ';
+$CATBOOMMAILER_LANG['smtp_error']           = 'SMTP सर्वर त्रुटि। ';
+$CATBOOMMAILER_LANG['variable_set']         = 'चर को बना या संशोधित नहीं किया जा सकता। ';
+$CATBOOMMAILER_LANG['extension_missing']    = 'एक्सटेन्षन गायब है: ';

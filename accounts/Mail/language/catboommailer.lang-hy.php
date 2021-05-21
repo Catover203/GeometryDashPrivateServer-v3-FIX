@@ -1,0 +1,20 @@
+<?php
+$CATBOOMMAILER_LANG['authenticate']         = 'SMTP -ի սխալ: չհաջողվեց ստուգել իսկությունը.';
+$CATBOOMMAILER_LANG['connect_host']         = 'SMTP -ի սխալ: չհաջողվեց կապ հաստատել SMTP սերվերի հետ.';
+$CATBOOMMAILER_LANG['data_not_accepted']    = 'SMTP -ի սխալ: տվյալները ընդունված չեն.';
+$CATBOOMMAILER_LANG['empty_message']        = 'Հաղորդագրությունը դատարկ է';
+$CATBOOMMAILER_LANG['encoding']             = 'Կոդավորման անհայտ տեսակ: ';
+$CATBOOMMAILER_LANG['execute']              = 'Չհաջողվեց իրականացնել հրամանը: ';
+$CATBOOMMAILER_LANG['file_access']          = 'Ֆայլը հասանելի չէ: ';
+$CATBOOMMAILER_LANG['file_open']            = 'Ֆայլի սխալ: ֆայլը չհաջողվեց բացել: ';
+$CATBOOMMAILER_LANG['from_failed']          = 'Ուղարկողի հետևյալ հասցեն սխալ է: ';
+$CATBOOMMAILER_LANG['instantiate']          = 'Հնարավոր չէ կանչել mail ֆունկցիան.';
+$CATBOOMMAILER_LANG['invalid_address']      = 'Հասցեն սխալ է: ';
+$CATBOOMMAILER_LANG['mailer_not_supported'] = ' փոստային սերվերի հետ չի աշխատում.';
+$CATBOOMMAILER_LANG['provide_address']      = 'Անհրաժեշտ է տրամադրել գոնե մեկ ստացողի e-mail հասցե.';
+$CATBOOMMAILER_LANG['recipients_failed']    = 'SMTP -ի սխալ: չի հաջողվել ուղարկել հետևյալ ստացողների հասցեներին: ';
+$CATBOOMMAILER_LANG['signing']              = 'Ստորագրման սխալ: ';
+$CATBOOMMAILER_LANG['smtp_connect_failed']  = 'SMTP -ի connect() ֆունկցիան չի հաջողվել';
+$CATBOOMMAILER_LANG['smtp_error']           = 'SMTP սերվերի սխալ: ';
+$CATBOOMMAILER_LANG['variable_set']         = 'Չի հաջողվում ստեղծել կամ վերափոխել փոփոխականը: ';
+$CATBOOMMAILER_LANG['extension_missing']    = 'Հավելվածը բացակայում է: ';

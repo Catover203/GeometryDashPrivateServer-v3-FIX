@@ -1,0 +1,20 @@
+<?php
+$CATBOOMMAILER_LANG['authenticate']         = 'שגיאת SMTP: פעולת האימות נכשלה.';
+$CATBOOMMAILER_LANG['connect_host']         = 'שגיאת SMTP: לא הצלחתי להתחבר לשרת SMTP.';
+$CATBOOMMAILER_LANG['data_not_accepted']    = 'שגיאת SMTP: מידע לא התקבל.';
+$CATBOOMMAILER_LANG['empty_message']        = 'גוף ההודעה ריק';
+$CATBOOMMAILER_LANG['invalid_address']      = 'כתובת שגויה: ';
+$CATBOOMMAILER_LANG['encoding']             = 'קידוד לא מוכר: ';
+$CATBOOMMAILER_LANG['execute']              = 'לא הצלחתי להפעיל את: ';
+$CATBOOMMAILER_LANG['file_access']          = 'לא ניתן לגשת לקובץ: ';
+$CATBOOMMAILER_LANG['file_open']            = 'שגיאת קובץ: לא ניתן לגשת לקובץ: ';
+$CATBOOMMAILER_LANG['from_failed']          = 'כתובות הנמענים הבאות נכשלו: ';
+$CATBOOMMAILER_LANG['instantiate']          = 'לא הצלחתי להפעיל את פונקציית המייל.';
+$CATBOOMMAILER_LANG['mailer_not_supported'] = ' אינה נתמכת.';
+$CATBOOMMAILER_LANG['provide_address']      = 'חובה לספק לפחות כתובת אחת של מקבל המייל.';
+$CATBOOMMAILER_LANG['recipients_failed']    = 'שגיאת SMTP: הנמענים הבאים נכשלו: ';
+$CATBOOMMAILER_LANG['signing']              = 'שגיאת חתימה: ';
+$CATBOOMMAILER_LANG['smtp_connect_failed']  = 'SMTP Connect() failed.';
+$CATBOOMMAILER_LANG['smtp_error']           = 'שגיאת שרת SMTP: ';
+$CATBOOMMAILER_LANG['variable_set']         = 'לא ניתן לקבוע או לשנות את המשתנה: ';
+//$CATBOOMMAILER_LANG['extension_missing']    = 'Extension missing: ';

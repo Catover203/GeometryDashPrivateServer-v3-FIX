@@ -1,0 +1,20 @@
+<?php
+$CATBOOMMAILER_LANG['authenticate']         = 'خطای SMTP: احراز هویت با شکست مواجه شد.';
+$CATBOOMMAILER_LANG['connect_host']         = 'خطای SMTP: اتصال به سرور SMTP برقرار نشد.';
+$CATBOOMMAILER_LANG['data_not_accepted']    = 'خطای SMTP: داده‌ها نا‌درست هستند.';
+$CATBOOMMAILER_LANG['empty_message']        = 'بخش متن پیام خالی است.';
+$CATBOOMMAILER_LANG['encoding']             = 'کد‌گذاری نا‌شناخته: ';
+$CATBOOMMAILER_LANG['execute']              = 'امکان اجرا وجود ندارد: ';
+$CATBOOMMAILER_LANG['file_access']          = 'امکان دسترسی به فایل وجود ندارد: ';
+$CATBOOMMAILER_LANG['file_open']            = 'خطای File: امکان بازکردن فایل وجود ندارد: ';
+$CATBOOMMAILER_LANG['from_failed']          = 'آدرس فرستنده اشتباه است: ';
+$CATBOOMMAILER_LANG['instantiate']          = 'امکان معرفی تابع ایمیل وجود ندارد.';
+$CATBOOMMAILER_LANG['invalid_address']      = 'آدرس ایمیل معتبر نیست: ';
+$CATBOOMMAILER_LANG['mailer_not_supported'] = ' mailer پشتیبانی نمی‌شود.';
+$CATBOOMMAILER_LANG['provide_address']      = 'باید حداقل یک آدرس گیرنده وارد کنید.';
+$CATBOOMMAILER_LANG['recipients_failed']    = 'خطای SMTP: ارسال به آدرس گیرنده با خطا مواجه شد: ';
+$CATBOOMMAILER_LANG['signing']              = 'خطا در امضا: ';
+$CATBOOMMAILER_LANG['smtp_connect_failed']  = 'خطا در اتصال به SMTP.';
+$CATBOOMMAILER_LANG['smtp_error']           = 'خطا در SMTP Server: ';
+$CATBOOMMAILER_LANG['variable_set']         = 'امکان ارسال یا ارسال مجدد متغیر‌ها وجود ندارد: ';
+$CATBOOMMAILER_LANG['extension_missing']    = 'افزونه موجود نیست: ';

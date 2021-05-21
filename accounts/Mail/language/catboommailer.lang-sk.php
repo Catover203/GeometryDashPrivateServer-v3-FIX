@@ -1,0 +1,22 @@
+<?php
+$CATBOOMMAILER_LANG['authenticate']         = 'SMTP Error: Chyba autentifikácie.';
+$CATBOOMMAILER_LANG['connect_host']         = 'SMTP Error: Nebolo možné nadviazať spojenie so SMTP serverom.';
+$CATBOOMMAILER_LANG['data_not_accepted']    = 'SMTP Error: Dáta neboli prijaté';
+$CATBOOMMAILER_LANG['empty_message']        = 'Prázdne telo správy.';
+$CATBOOMMAILER_LANG['encoding']             = 'Neznáme kódovanie: ';
+$CATBOOMMAILER_LANG['execute']              = 'Nedá sa vykonať: ';
+$CATBOOMMAILER_LANG['file_access']          = 'Súbor nebol nájdený: ';
+$CATBOOMMAILER_LANG['file_open']            = 'File Error: Súbor sa otvoriť pre čítanie: ';
+$CATBOOMMAILER_LANG['from_failed']          = 'Následujúca adresa From je nesprávna: ';
+$CATBOOMMAILER_LANG['instantiate']          = 'Nedá sa vytvoriť inštancia emailovej funkcie.';
+$CATBOOMMAILER_LANG['invalid_address']      = 'Neodoslané, emailová adresa je nesprávna: ';
+$CATBOOMMAILER_LANG['invalid_hostentry']    = 'Záznam hostiteľa je nesprávny: ';
+$CATBOOMMAILER_LANG['invalid_host']         = 'Hostiteľ je nesprávny: ';
+$CATBOOMMAILER_LANG['mailer_not_supported'] = ' emailový klient nieje podporovaný.';
+$CATBOOMMAILER_LANG['provide_address']      = 'Musíte zadať aspoň jednu emailovú adresu príjemcu.';
+$CATBOOMMAILER_LANG['recipients_failed']    = 'SMTP Error: Adresy príjemcov niesu správne ';
+$CATBOOMMAILER_LANG['signing']              = 'Chyba prihlasovania: ';
+$CATBOOMMAILER_LANG['smtp_connect_failed']  = 'SMTP Connect() zlyhalo.';
+$CATBOOMMAILER_LANG['smtp_error']           = 'SMTP chyba serveru: ';
+$CATBOOMMAILER_LANG['variable_set']         = 'Nemožno nastaviť alebo resetovať premennú: ';
+$CATBOOMMAILER_LANG['extension_missing']    = 'Chýba rozšírenie: ';

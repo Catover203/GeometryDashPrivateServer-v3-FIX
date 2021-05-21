@@ -1,0 +1,22 @@
+<?php
+$CATBOOMMAILER_LANG['authenticate']         = 'Erreur SMTP : échec de l\'authentification.';
+$CATBOOMMAILER_LANG['connect_host']         = 'Erreur SMTP : impossible de se connecter au serveur SMTP.';
+$CATBOOMMAILER_LANG['data_not_accepted']    = 'Erreur SMTP : données incorrectes.';
+$CATBOOMMAILER_LANG['empty_message']        = 'Corps du message vide.';
+$CATBOOMMAILER_LANG['encoding']             = 'Encodage inconnu : ';
+$CATBOOMMAILER_LANG['execute']              = 'Impossible de lancer l\'exécution : ';
+$CATBOOMMAILER_LANG['file_access']          = 'Impossible d\'accéder au fichier : ';
+$CATBOOMMAILER_LANG['file_open']            = 'Ouverture du fichier impossible : ';
+$CATBOOMMAILER_LANG['from_failed']          = 'L\'adresse d\'expéditeur suivante a échoué : ';
+$CATBOOMMAILER_LANG['instantiate']          = 'Impossible d\'instancier la fonction mail.';
+$CATBOOMMAILER_LANG['invalid_address']      = 'L\'adresse courriel n\'est pas valide : ';
+$CATBOOMMAILER_LANG['invalid_hostentry']    = 'L\'entrée hôte n\'est pas valide : ';
+$CATBOOMMAILER_LANG['invalid_host']         = 'L\'hôte n\'est pas valide : ';
+$CATBOOMMAILER_LANG['mailer_not_supported'] = ' client de messagerie non supporté.';
+$CATBOOMMAILER_LANG['provide_address']      = 'Vous devez fournir au moins une adresse de destinataire.';
+$CATBOOMMAILER_LANG['recipients_failed']    = 'Erreur SMTP : les destinataires suivants sont en erreur : ';
+$CATBOOMMAILER_LANG['signing']              = 'Erreur de signature : ';
+$CATBOOMMAILER_LANG['smtp_connect_failed']  = 'Échec de la connexion SMTP.';
+$CATBOOMMAILER_LANG['smtp_error']           = 'Erreur du serveur SMTP : ';
+$CATBOOMMAILER_LANG['variable_set']         = 'Impossible d\'initialiser ou de réinitialiser une variable : ';
+$CATBOOMMAILER_LANG['extension_missing']    = 'Extension manquante : ';

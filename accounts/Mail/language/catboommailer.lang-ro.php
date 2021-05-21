@@ -1,0 +1,20 @@
+<?php
+$CATBOOMMAILER_LANG['authenticate']         = 'Eroare SMTP: Autentificarea a eșuat.';
+$CATBOOMMAILER_LANG['connect_host']         = 'Eroare SMTP: Conectarea la serverul SMTP a eșuat.';
+$CATBOOMMAILER_LANG['data_not_accepted']    = 'Eroare SMTP: Datele nu au fost acceptate.';
+$CATBOOMMAILER_LANG['empty_message']        = 'Mesajul este gol.';
+$CATBOOMMAILER_LANG['encoding']             = 'Encodare necunoscută: ';
+$CATBOOMMAILER_LANG['execute']              = 'Nu se poate executa următoarea comandă:  ';
+$CATBOOMMAILER_LANG['file_access']          = 'Nu se poate accesa următorul fișier: ';
+$CATBOOMMAILER_LANG['file_open']            = 'Eroare fișier: Nu se poate deschide următorul fișier: ';
+$CATBOOMMAILER_LANG['from_failed']          = 'Următoarele adrese From au dat eroare: ';
+$CATBOOMMAILER_LANG['instantiate']          = 'Funcția mail nu a putut fi inițializată.';
+$CATBOOMMAILER_LANG['invalid_address']      = 'Adresa de email nu este validă: ';
+$CATBOOMMAILER_LANG['mailer_not_supported'] = ' mailer nu este suportat.';
+$CATBOOMMAILER_LANG['provide_address']      = 'Trebuie să adăugați cel puțin o adresă de email.';
+$CATBOOMMAILER_LANG['recipients_failed']    = 'Eroare SMTP: Următoarele adrese de email au eșuat: ';
+$CATBOOMMAILER_LANG['signing']              = 'A aparut o problemă la semnarea emailului. ';
+$CATBOOMMAILER_LANG['smtp_connect_failed']  = 'Conectarea la serverul SMTP a eșuat.';
+$CATBOOMMAILER_LANG['smtp_error']           = 'Eroare server SMTP: ';
+$CATBOOMMAILER_LANG['variable_set']         = 'Nu se poate seta/reseta variabila. ';
+$CATBOOMMAILER_LANG['extension_missing']    = 'Lipsește extensia: ';

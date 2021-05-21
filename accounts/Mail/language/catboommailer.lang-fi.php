@@ -1,0 +1,21 @@
+<?php
+$CATBOOMMAILER_LANG['authenticate']         = 'SMTP-virhe: käyttäjätunnistus epäonnistui.';
+$CATBOOMMAILER_LANG['connect_host']         = 'SMTP-virhe: yhteys palvelimeen ei onnistu.';
+$CATBOOMMAILER_LANG['data_not_accepted']    = 'SMTP-virhe: data on virheellinen.';
+//$CATBOOMMAILER_LANG['empty_message']        = 'Message body empty';
+$CATBOOMMAILER_LANG['encoding']             = 'Tuntematon koodaustyyppi: ';
+$CATBOOMMAILER_LANG['execute']              = 'Suoritus epäonnistui: ';
+$CATBOOMMAILER_LANG['file_access']          = 'Seuraavaan tiedostoon ei ole oikeuksia: ';
+$CATBOOMMAILER_LANG['file_open']            = 'Tiedostovirhe: Ei voida avata tiedostoa: ';
+$CATBOOMMAILER_LANG['from_failed']          = 'Seuraava lähettäjän osoite on virheellinen: ';
+$CATBOOMMAILER_LANG['instantiate']          = 'mail-funktion luonti epäonnistui.';
+//$CATBOOMMAILER_LANG['invalid_address']      = 'Invalid address: ';
+$CATBOOMMAILER_LANG['mailer_not_supported'] = 'postivälitintyyppiä ei tueta.';
+$CATBOOMMAILER_LANG['provide_address']      = 'Aseta vähintään yksi vastaanottajan sähk&ouml;postiosoite.';
+$CATBOOMMAILER_LANG['recipients_failed']    = 'SMTP-virhe: seuraava vastaanottaja osoite on virheellinen.';
+$CATBOOMMAILER_LANG['encoding']             = 'Tuntematon koodaustyyppi: ';
+//$CATBOOMMAILER_LANG['signing']              = 'Signing Error: ';
+//$CATBOOMMAILER_LANG['smtp_connect_failed']  = 'SMTP Connect() failed.';
+//$CATBOOMMAILER_LANG['smtp_error']           = 'SMTP server error: ';
+//$CATBOOMMAILER_LANG['variable_set']         = 'Cannot set or reset variable: ';
+//$CATBOOMMAILER_LANG['extension_missing']    = 'Extension missing: ';

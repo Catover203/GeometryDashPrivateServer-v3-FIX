@@ -1,0 +1,20 @@
+<?php
+$CATBOOMMAILER_LANG['authenticate']         = 'SMTP 错误：登录失败。';
+$CATBOOMMAILER_LANG['connect_host']         = 'SMTP 错误：无法连接到 SMTP 主机。';
+$CATBOOMMAILER_LANG['data_not_accepted']    = 'SMTP 错误：数据不被接受。';
+$CATBOOMMAILER_LANG['empty_message']        = '邮件正文为空。';
+$CATBOOMMAILER_LANG['encoding']             = '未知编码：';
+$CATBOOMMAILER_LANG['execute']              = '无法执行：';
+$CATBOOMMAILER_LANG['file_access']          = '无法访问文件：';
+$CATBOOMMAILER_LANG['file_open']            = '文件错误：无法打开文件：';
+$CATBOOMMAILER_LANG['from_failed']          = '发送地址错误：';
+$CATBOOMMAILER_LANG['instantiate']          = '未知函数调用。';
+$CATBOOMMAILER_LANG['invalid_address']      = '发送失败，电子邮箱地址是无效的：';
+$CATBOOMMAILER_LANG['mailer_not_supported'] = '发信客户端不被支持。';
+$CATBOOMMAILER_LANG['provide_address']      = '必须提供至少一个收件人地址。';
+$CATBOOMMAILER_LANG['recipients_failed']    = 'SMTP 错误：收件人地址错误：';
+$CATBOOMMAILER_LANG['signing']              = '登录失败：';
+$CATBOOMMAILER_LANG['smtp_connect_failed']  = 'SMTP服务器连接失败。';
+$CATBOOMMAILER_LANG['smtp_error']           = 'SMTP服务器出错：';
+$CATBOOMMAILER_LANG['variable_set']         = '无法设置或重置变量：';
+$CATBOOMMAILER_LANG['extension_missing']    = '丢失模块 Extension：';

@@ -1,0 +1,22 @@
+<?php
+$CATBOOMMAILER_LANG['authenticate']         = 'SMTP napaka: Avtentikacija ni uspela.';
+$CATBOOMMAILER_LANG['connect_host']         = 'SMTP napaka: Vzpostavljanje povezave s SMTP gostiteljem ni uspelo.';
+$CATBOOMMAILER_LANG['data_not_accepted']    = 'SMTP napaka: Strežnik zavrača podatke.';
+$CATBOOMMAILER_LANG['empty_message']        = 'E-poštno sporočilo nima vsebine.';
+$CATBOOMMAILER_LANG['encoding']             = 'Nepoznan tip kodiranja: ';
+$CATBOOMMAILER_LANG['execute']              = 'Operacija ni uspela: ';
+$CATBOOMMAILER_LANG['file_access']          = 'Nimam dostopa do datoteke: ';
+$CATBOOMMAILER_LANG['file_open']            = 'Ne morem odpreti datoteke: ';
+$CATBOOMMAILER_LANG['from_failed']          = 'Neveljaven e-naslov pošiljatelja: ';
+$CATBOOMMAILER_LANG['instantiate']          = 'Ne morem inicializirati mail funkcije.';
+$CATBOOMMAILER_LANG['invalid_address']      = 'E-poštno sporočilo ni bilo poslano. E-naslov je neveljaven: ';
+$CATBOOMMAILER_LANG['invalid_hostentry']    = 'Neveljaven vnos gostitelja: ';
+$CATBOOMMAILER_LANG['invalid_host']         = 'Neveljaven gostitelj: ';
+$CATBOOMMAILER_LANG['mailer_not_supported'] = ' mailer ni podprt.';
+$CATBOOMMAILER_LANG['provide_address']      = 'Prosimo, vnesite vsaj enega naslovnika.';
+$CATBOOMMAILER_LANG['recipients_failed']    = 'SMTP napaka: Sledeči naslovniki so neveljavni: ';
+$CATBOOMMAILER_LANG['signing']              = 'Napaka pri podpisovanju: ';
+$CATBOOMMAILER_LANG['smtp_connect_failed']  = 'Ne morem vzpostaviti povezave s SMTP strežnikom.';
+$CATBOOMMAILER_LANG['smtp_error']           = 'Napaka SMTP strežnika: ';
+$CATBOOMMAILER_LANG['variable_set']         = 'Ne morem nastaviti oz. ponastaviti spremenljivke: ';
+$CATBOOMMAILER_LANG['extension_missing']    = 'Manjkajoča razširitev: ';

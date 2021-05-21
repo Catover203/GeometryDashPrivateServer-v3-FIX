@@ -1,0 +1,20 @@
+<?php
+$CATBOOMMAILER_LANG['authenticate']         = 'SMTP 錯誤：登入失敗。';
+$CATBOOMMAILER_LANG['connect_host']         = 'SMTP 錯誤：無法連線到 SMTP 主機。';
+$CATBOOMMAILER_LANG['data_not_accepted']    = 'SMTP 錯誤：無法接受的資料。';
+$CATBOOMMAILER_LANG['empty_message']        = '郵件內容為空';
+$CATBOOMMAILER_LANG['encoding']             = '未知編碼: ';
+$CATBOOMMAILER_LANG['execute']              = '無法執行：';
+$CATBOOMMAILER_LANG['file_access']          = '無法存取檔案：';
+$CATBOOMMAILER_LANG['file_open']            = '檔案錯誤：無法開啟檔案：';
+$CATBOOMMAILER_LANG['from_failed']          = '發送地址錯誤：';
+$CATBOOMMAILER_LANG['instantiate']          = '未知函數呼叫。';
+$CATBOOMMAILER_LANG['invalid_address']      = '因為電子郵件地址無效，無法傳送: ';
+$CATBOOMMAILER_LANG['mailer_not_supported'] = '不支援的發信客戶端。';
+$CATBOOMMAILER_LANG['provide_address']      = '必須提供至少一個收件人地址。';
+$CATBOOMMAILER_LANG['recipients_failed']    = 'SMTP 錯誤：以下收件人地址錯誤：';
+$CATBOOMMAILER_LANG['signing']              = '電子簽章錯誤: ';
+$CATBOOMMAILER_LANG['smtp_connect_failed']  = 'SMTP 連線失敗';
+$CATBOOMMAILER_LANG['smtp_error']           = 'SMTP 伺服器錯誤: ';
+$CATBOOMMAILER_LANG['variable_set']         = '無法設定或重設變數: ';
+$CATBOOMMAILER_LANG['extension_missing']    = '遺失模組 Extension: ';
