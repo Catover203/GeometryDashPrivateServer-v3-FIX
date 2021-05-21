@@ -1,5 +1,5 @@
 # GMDprivateServer
-## Geometry Dash Private Server fix v3
+## Fixed Geometry Dash Private Server
 Basically a Geometry Dash Server Emulator
 
 Supported version of Geometry Dash: 1.0 - 2.11 (sometime i will add more file to support 2.2 version) (so any version of Geometry Dash works, as of fix this [20/4/2020])
@@ -14,6 +14,12 @@ Required version of PHP: 5.4+ (tested up to 7.3.11)
 
    ->Android : edit link using hex editor to edit lib2coco.so with base64 then replace this file to apk using apk editor
    
+### Feature
+- Email Sending
+- Chat color on account comment (robtob)
+- Add tools for dashboard (English only)
+- Remove some tool on tools folder
+
 ### Credits
 Base for account settings and the private messaging system by someguy28
 
