@@ -1,4 +1,5 @@
 <?php
+include __DIR__ . "/ip_in_range.php";
 class mainLib {
 		public function sendMail($from, $to, $subject, $body){
 		include __DIR__ . "/../../config/email.php";
@@ -658,7 +659,7 @@ class mainLib {
 			'131.0.72.0/22'
 	    );
 	    foreach ($cf_ips as $cf_ip) {
-	        if (ip_in_range($ip, $cf_ip)) {
+	        if (ipInRange::ipv4_in_range($ip, $cf_ip)) {
 	            return true;
 	        }
 	    }
