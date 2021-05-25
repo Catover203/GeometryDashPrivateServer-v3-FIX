@@ -426,6 +426,9 @@ ALTER TABLE `accounts`
 ALTER TABLE `actions`
   ADD PRIMARY KEY (`ID`),
   ADD KEY `type` (`type`);
+  ADD KEY `value` (`value`),
+  ADD KEY `value2` (`value2`),
+  ADD KEY `timestamp` (`timestamp`);
 
 ALTER TABLE `bannedips`
   ADD PRIMARY KEY (`ID`);
